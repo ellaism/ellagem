@@ -151,6 +151,7 @@
                 "enterPassword": "Passwort eingeben",
                 "repeatPassword": "Passwort wiederholen",
                 "creating": "Konto wird angelegt...",
+                "showPassword": "Passwort anzeigen",
                 "errors": {
                     "passwordMismatch": "Die Passwörter stimmen nicht überein.",
                     "passwordTooShort": "Wähle ein längeres Passwort..."
@@ -198,51 +199,6 @@
                 "showDecodedParameters": "Zeige dekodierte Parameter",
                 "lookupData": "Versuche die Daten zu dekodieren",
                 "lookupDataExplainer": "Schaue dies im Internet nach"
-            },
-            "onboarding": {
-                "description": "Ethereum ist eine dezentrale Plattform, um Anwendungen auf einer Blockchain zu bauen: Fälschungssichere Software, die Werte und Vermögen übertragen kann und für immer besteht",
-                "goToTestnet": "Verwende das Testnetz (Rinkeby)",
-                "goToTestnetDescription": "Teste die Technologie frei in der Testnetz-Sandbox, ",
-                "gotoMainnet": "Verwende das Hauptnetz",
-                "gotoMainnetDescription": " Du wirst etwas Ether benötigen, um Verträge anzulegen und auszuführen. Wir werden dir helfen, etwas zu bekommen ...",
-                "doYouHaveAWalletFile": "Hast du eine Wallet-Datei?",
-                "walletFileDescription": "<p>Wallet-Datei zum importieren in dieses Fenster ziehen.<br>Wenn du 2014 am Ethereum-Pre-sale teilgenommen hast, solltest du über eine Datei mit dem Dateinamen <code>ethereum_wallet_backup.json</code> verfügen. Sie wurde nach dem Kauf heruntergeladen und dir auch per E-Mail geschickt.</p>",
-                "dropFilesHere": "Pre-sale Datei laden",
-                "creating": "Erstellen...",
-                "importing": "Importieren...",
-                "skip": "Diesen Schritt überspringen",
-                "next": "Nächster",
-                "protectTitle": "Schütze dein Konto",
-                "protectDescription": "Wähle ein Passwort für dein Konto. Mache es so stark, als wären es deine Hausschlüssel!",
-                "accountTitle": "Lade die Datei hoch!",
-                "accountTitleTestnet": "Ether minen!",
-                "etherDescription": "Das Ethereum Netz basiert auf einem Tokan namens “Ether”. Du benötigst eine kleine Menge davon, um irgendetwas auf dem Ethereum-Netz zu tun.",
-                "loadItDescription": "Wenn du bereits über Bitcoin oder eine andere Kryptowährung verfügst, kannst du diese mit Shapeshift einfach in Ether umtauschen. <br><br> Wir empfehlen, ca. <strong>0.25 bis 1 ether</strong> einzutauschen.",
-                "mineItDescription": "<strong>Auf dem Testnetz kannst du selbst Ether minen. Bitte gehe dazu in den Menüpunkt <em>Entwicklung</em> menu und wähle <em>Mining starten</em>. </strong> <br> <strong> VERSUCHE NICHT, ECHTE ETHER AN DIESE ADRESSE ZU SENDEN! </strong>",
-                "you": "DU",
-                "etherbase": "Hauptkonto (etherbase)",
-                "depositBitcoin": "Bitcoin eintauschen",
-                "learnIt": "Lerne Ethereum kennen, während du wartest",
-                "downloadingBlocks": "Blöcke werden heruntergeladen",
-                "tutorial1Description": "<p> Nun musst du lediglich warten, bis der Download abgeschlossen ist. Hier findest du weitere Informationen:</p> <h4>Make your own money </h4> <p> Erstelle eine eigene Kryptowährung mit einer festen Geldmenge, Token, die reale Vermögenswerte darstellen, und so weiter ...</p>",
-                "tutorial2Description": "<h4> Erstelle einen Crowdsale</h4> <p> Sammle Mittel für ein gemeinsames Ziel, vollkommen vertrauenswürdig ohne einen weiteren Dritten. Überwinde die Hürden von traditionellen Crowdfunding-Systemen und gehe direkt an die Quellen, indem du deine Organisation über die Blockchain mit Mitteln versorgst.</p>",
-                "tutorial3Description": "<h4> Blockchain-Organisation </h4> <p> Schaffe eine autonome Organisation, deren Grundsätze über Geldverwendung und Entscheidungen nicht gebrochen werden können. Gib deinen Unterstützern eine aktive Rolle, wie die Mittel verwendet werden sollen</p>",
-                "buttons": {
-                    "showPassword": "Passwort anzeigen",
-                    "importAccount": "Konto importieren",
-                    "launchApp": "Anwendung wird gestartet!",
-                    "learnReceipt": "Lerne dieses Rezept kennen"
-                },
-                "errors": {
-                    "nodeNotStartedYet": "Warte noch einige Sekunden, bis der Softwareknoten gestartet ist, und versuche es dann noch einmal",
-                    "unknownFile": "Datei nicht erkannt.",
-                    "wrongPassword": "Falsches Passwort.",
-                    "importFailed": "Beim Import der Datei ist folgender Fehler aufgetreten: __error__"
-                },
-                "viaShapeshift": "Sofortige Konversion via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
-                "syncMessage": "Block __displayBlock__ von __highestBlockString__",
-                "syncMessageWithStates": "Block __displayBlock__ von __highestBlockString__ (Chain Struktur __statesPercent__%)",
-                "startingSync": "Bereite Synchronisation vor.."
             },
             "updateAvailable": {
                 "newVersionAvailable": "Neue __name__ Version verfügbar",

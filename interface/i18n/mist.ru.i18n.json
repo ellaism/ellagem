@@ -203,51 +203,6 @@
                 "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
                 "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
             },
-            "onboarding": {
-                "description": "Etherium представляет собой децентрализованную платформу основанную на блокчейне для создания надежных и децентрализованных приложений",
-                "goToTestnet": "Использовать тестовую сеть (Rinkeby)",
-                "goToTestnetDescription": "Свободное тестирование технологии в тестовой сети (sandbox), без использования реального эфира.",
-                "gotoMainnet": "Использовать основную сеть",
-                "gotoMainnetDescription": "Вам потребуется некоторое количество эфира для того, чтобы создавать и выполнять контракты. Не волнуйтесь, мы вам поможем получить некоторое количество...",
-                "doYouHaveAWalletFile": "У вас есть файл кошелька?",
-                "walletFileDescription": "<p>Если вы участвовали в Ethereum Pre-sale 2014, у вас должен быть файл с именем <code>ethereum_wallet_backup.json</code>. Он был загружен после продажи, а также отправлен на электронную почту</p>",
-                "dropFilesHere": "Перетащите сюда ваш файл",
-                "creating": "Создание...",
-                "importing": "Импорт...",
-                "skip": "Пропустить этот шаг",
-                "next": "Далее",
-                "protectTitle": "Защитите ваш аккаунт",
-                "protectDescription": "Выберите пароль для новой учетной записи. Придумайте такой пароль, как будто он защитит ваши ключи от дома!",
-                "accountTitle": "Загрузите его!",
-                "etherDescription": "Сеть Ethereum основана на маркерах называемых “Ether” (Эфир). Он вам необходим в небольшом количетсве для того, что бы что-либо сделать в сети Etherium.",
-                "loadItDescription": "Если у вас уже есть Bitcoin, или любая другая криптовалюта, вы можете легко преобразовать её в эфир (Ether) с помощью Shapeshift. <br><br> Мы рекомендуем загрузить где-то <strong>от 0.25 до 1 эфира</strong>.",
-                "mineItDescription": "<strong>В тестовой сети вы можете добыть (намайнить) эфир сами, перейдя в меню <em>Дополнительно</em> и выбрав <em>Запустить майнинг</em>. </strong> <br> <strong> НЕ ПЫТАЙТЕСЬ ОТПРАВИТЬ РЕАЛЬНЫЙ ЭФИР НА ЭТОТ АДРЕС</strong>",
-                "you": "ВЫ",
-                "etherbase": "Основной аккаунт (etherbase)",
-                "depositBitcoin": "Внести депозит через Bitcoin",
-                "viaShapeshift": "Мгновенное приобразование с помощью <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
-                "learnIt": "Изучайте, пока ожидаете",
-                "downloadingBlocks": "Загрузка блоков",
-                "syncMessage": "Блок __displayBlock__ из __highestBlockString__",
-                "syncMessageWithStates": "Блок __displayBlock__ из __highestBlockString__ (Структура блокчейна __statesPercent__%)",
-                "tutorial1Description": "<p> Теперь ожидайте окончания загрузки для завершения. Вот несколько советов: </p> <h4>Сделайте свои собственные деньги </h4> <p> Сделайте криптовалюту с запасом фиксированного рынка, маркеры представляющие реальные мировые активы и т.д. </p>",
-                "tutorial2Description": "<h4> Организуйте crowdsale </h4> <p> Привлечение средств для достижения общей цели полностью надёжно только без участия третьей стороны. Обойдите барьер традиционной системы финансирования и перейдите к финансированию организации непосредственно через блокчейн.</p>",
-                "tutorial3Description": "<h4> Создайте организацию </h4> <p> Создайте автономную организацию с правилами о расходовании денег и принятии решений для вас и ваших инвесторов.</p>",
-                "buttons": {
-                    "showPassword": "Показать пароль",
-                    "importAccount": "Импортировать аккаунт",
-                    "launchApp": "Запустить приложение!",
-                    "learnReceipt": "Узнать этот рецепт"
-                },
-                "errors": {
-                    "nodeNotStartedYet": "Подождите несколько секунд, пока ваша нода не будет полностью запущена и повторите попытку.",
-                    "unknownFile": "Файл не распознается.",
-                    "wrongPassword": "Неверный пароль.",
-                    "importFailed": "Не удалось импортировать файл, дополнительно: __error__"
-                },
-                "accountTitleTestnet": "Mine some!",
-                "startingSync": "Getting ready to sync.."
-            },
             "connectAccount": {
                 "chooseAccountTitle": "Choose account",
                 "createAccount": "Create new account",
@@ -259,6 +214,7 @@
                 "enterPassword": "Enter password",
                 "repeatPassword": "Repeat password",
                 "creating": "Generating account...",
+                "showPassword": "Показать пароль",
                 "errors": {
                     "passwordMismatch": "Your passwords don't match.",
                     "passwordTooShort": "Make a longer password"

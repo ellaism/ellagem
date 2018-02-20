@@ -151,6 +151,7 @@
                 "enterPassword": "Introduzca la contraseña",
                 "repeatPassword": "Repita la contraseña",
                 "creating": "Generando cuenta...",
+                "showPassword": "Mostrar contraseña",
                 "errors": {
                     "passwordMismatch": "Tus contraseñas no coinciden.",
                     "passwordTooShort": "Make a longer password"
@@ -200,51 +201,6 @@
                 "lookupDataExplainer": "Look this up on the internet",
                 "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
                 "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
-            },
-            "onboarding": {
-                "description": "Ethereum es una plataforma descentralizada para la construcción de aplicaciones en una blockchain: segura y a prueba de manipulaciones que puede transferir valor, propiedad y vive para siempre",
-                "goToTestnet": "Utiliza la red de pruebas (Rinkeby)",
-                "goToTestnetDescription": "Pruebe la tecnología libremente en una red de pruebas sin utilizar ether reales.",
-                "gotoMainnet": "Utilizar la red principal",
-                "gotoMainnetDescription": " Necesitarás algunos Ether para poder crear y ejecutar contratos. No se preocupe, nosotros le ayudaremos a obtener algunos...",
-                "doYouHaveAWalletFile": "¿Tiene un archivo de monedero?",
-                "walletFileDescription": "<p>Si participaste en la preventa de Ethereum en 2014, deberías tener un archivo llamado <code>ethereum_wallet_backup.json</code>. Se descargó después de la venta y también se envió a su correo electrónico.</p>",
-                "dropFilesHere": "Soltar el archivo de la pre-venta",
-                "creating": "Creando...",
-                "importing": "Importando...",
-                "skip": "Omitir este paso",
-                "next": "Siguiente",
-                "protectTitle": "Proteger su cuenta",
-                "protectDescription": "Elija una contraseña para su nueva cuenta que sea tan fuerte como si fuera a proteger las llaves de su casa!",
-                "accountTitle": "Cargarla!",
-                "accountTitleTestnet": "Minar algunos!",
-                "etherDescription": "La red ethereum está basada en un token llamado “Ether”. Necesitarás una pequeña cantidad de él para hacer cualquier cosa en la red Ethereum.",
-                "loadItDescription": "Si ya dispone de Bitcoin o cualquier otra criptomoneda, puede convertirlas fácilmente a ether utilizando shapeshift. <br><br> Recomendamos una cuantía de entre <strong>0.25 a 1 ether</strong>.",
-                "mineItDescription": "<strong>En la red de pruebas puedes minar ether tú mismo desde el menú <em>Desarrollar</em> y eligiendo <em>Empezar a minar</em>. </strong> <br> <strong> NO INTENTE ENVIAR ETHER REALES A ESTA DIRECCIÓN </strong>",
-                "you": "TÚ",
-                "etherbase": "Cuenta principal (etherbase)",
-                "depositBitcoin": "Depositar Bitcoin",
-                "learnIt": "Aprenda mientras espera",
-                "downloadingBlocks": "Descargando bloques",
-                "tutorial1Description": "<p> Ahora lo único que queda por hacer es esperar a que finalice la descarga. Aquí tiene unas sugerencias de lectura: </p> <h4>Haga su propio dinero </h4> <p> Haga una criptomoneda con una oferta de mercado fija, tokens que representen activos del mundo real, etc </p>",
-                "tutorial2Description": "<h4> Crear una crowdsale </h4> <p> Recaude fondos para un objetivo común, totalmente confiable y sin terceros. Evite así el obstáculo de la financiación del sistema tradicional y vaya directamente a la fuente mediante la financiación de una organización a través de la blockchain.</p>",
-                "tutorial3Description": "<h4> Organización en la Blockchain </h4> <p> Crea una organización autónoma con reglas inquebrantables sobre cómo el dinero puede ser gastado y quién puede tomar las decisiones. Deje que sus promotores tengan un papel activo en la forma en que se gasta el dinero</p>",
-                "buttons": {
-                    "showPassword": "Mostrar contraseña",
-                    "importAccount": "Importar cuenta",
-                    "launchApp": "Lanzar Aplicación!",
-                    "learnReceipt": "Aprender esta receta"
-                },
-                "errors": {
-                    "nodeNotStartedYet": "Espere unos segundos más hasta que su nodo esté completamente iniciado y vuelva a intentarlo",
-                    "unknownFile": "Archivo no reconocido.",
-                    "wrongPassword": "Contraseña incorrecta.",
-                    "importFailed": "No se pudo importar el archivo por el error: __error__"
-                },
-                "viaShapeshift": "Instant conversion via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
-                "syncMessage": "Block __displayBlock__ of __highestBlockString__",
-                "syncMessageWithStates": "Block __displayBlock__ of __highestBlockString__ (Chain structure __statesPercent__%)",
-                "startingSync": "Getting ready to sync.."
             },
             "connectAccount": {
                 "chooseAccountTitle": "Elegir sus cuentas",

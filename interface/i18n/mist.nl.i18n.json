@@ -181,6 +181,7 @@
                 "enterPassword": "Wachtwoord invoeren",
                 "repeatPassword": "Wachtwoord herhalen",
                 "creating": "Account genereren...",
+                "showPassword": "Toon wachtwoord",
                 "errors": {
                     "passwordMismatch": "Je wachtwoorden komen niet overeen.",
                     "passwordTooShort": "Kies een langer wachtwoord"
@@ -230,51 +231,6 @@
                 "lookupDataExplainer": "Zoek hiernaar op het internet",
                 "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
                 "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
-            },
-            "onboarding": {
-                "description": "Ethereum is een decentraal platform voor het bouwen van applicaties op een blockchain: software die immuun is voor fraude en levenslang waarde en eigendom over kan brengen",
-                "goToTestnet": "Gebruik het test netwerk (Rinkeby)",
-                "goToTestnetDescription": "Test de technologie vrij in een testongeving, zonder echte Ether te gebruiken.",
-                "gotoMainnet": "Gebruik hoofdnetwerk",
-                "gotoMainnetDescription": "Je zult een beetje Ether nodig hebben om contracten uit te voeren. Geen zorgen, we helpen je met het verkrijgen...",
-                "doYouHaveAWalletFile": "Heb je een wallet bestand?",
-                "walletFileDescription": "<p>Als je mee hebt gedaan met de Ethereum voorverkoop van 2014 zou je een bestand met de naam <code>ethereum_wallet_backup.json</code> ontvangen moeten hebben. Je kon dit bestand downloaden na je contributie en is ook per email verstuurd</p>",
-                "dropFilesHere": "Sleep voorverkoop bestand hier",
-                "creating": "Aanmaken...",
-                "importing": "Importeren...",
-                "skip": "Sla deze stap over",
-                "next": "Volgende",
-                "protectTitle": "Bescherm je account",
-                "protectDescription": "Kies een wachtwoord voor je nieuwe account. Maak het even veilig alsof het uw huissleutels zijn!",
-                "accountTitle": "Opladen!",
-                "accountTitleTestnet": "Mine wat!",
-                "etherDescription": "Het Ethereum netwerk is gebaseerd op het “Ether” token. Je zal een kleine hoeveelheid nodig hebben om dingen op het netwerk te doen.",
-                "loadItDescription": "Als je al Bitcoins of een andere cryptocurrency hebt kan je deze makkelijk inwisselen voor Ether met Shapeshift.<br><br> Wij raden aan een hoeveelheid van tussen de <strong>0.25 en 1 Ether</strong> om te wisselen.",
-                "mineItDescription": "<strong>Op het testnetwerk kun je zelf Ether mijnen door te gaan naar het <em>Ontwikkelaars</em> menu en te kiezen voor <em>Begin Mining</em>. </strong> <br> <strong> PROBEER GEEN ECHTE ETHER NAAR DIT ADRES TE VERSTUREN </strong>",
-                "you": "Je",
-                "etherbase": "Centrale account (Etherbase)",
-                "depositBitcoin": "Bitcoin Storten",
-                "viaShapeshift": "Direct omwisselen via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
-                "learnIt": "Leer terwijl je wacht",
-                "downloadingBlocks": "Blokken downloaden",
-                "syncMessage": "Blok __displayBlock__ van __highestBlockString__",
-                "syncMessageWithStates": "Blok __displayBlock__ van __highestBlockString__ (Chain structuur __statesPercent__%)",
-                "startingSync": "Wachten op synchronisatie..",
-                "tutorial1Description": "<p> Het enige wat er nog moet gebeuren is wachten tot de download compleet is. Hier zijn een aantal leessuggesties: </p> <h4>Maak je eigen geld </h4> <p> Maak een cryptocurrency met een vaste uitgeveven hoeveelheid, tokens die vermogen uit de echte wereld voorstellen, etc </p>",
-                "tutorial2Description": "<h4> Start een crowdsale </h4> <p> Haal geld op voor een gemeenschappelijk doel, volledig betrouwbaar zonder derde partij. Ga om het traditionele systeem heen en haal geld direct bij de bron op door een organisatie te crowdfunden via de blockchain</p>",
-                "tutorial3Description": "<h4> Blockchain Organisatie </h4> <p> Maak een autonome organisatie aan met onbreekbare regels over het uitgeven van geld en wie beslissingen kan maken. Laat je investeerders een actieve rol nemen in het besluiten hoe geld wordt uitgegeven</p>",
-                "buttons": {
-                    "showPassword": "Toon wachtwoord",
-                    "importAccount": "Importeer account",
-                    "launchApp": "Start Applicatie!",
-                    "learnReceipt": "Leer dit recept"
-                },
-                "errors": {
-                    "nodeNotStartedYet": "Wacht nog een aantal seconden tot je node volledig is opgestart en probeer het nog een keer",
-                    "unknownFile": "Bestand niet herkent.",
-                    "wrongPassword": "Incorrect wachtwoord.",
-                    "importFailed": "Bestand importeren mislukt: __error__"
-                }
             },
             "connectAccount": {
                 "chooseAccountTitle": "Kies account",
