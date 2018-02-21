@@ -54,12 +54,21 @@ module.exports = class extends BaseProcessor {
             }
 
             const modalWindow = Windows.createPopup('sendTransactionConfirmation', {
-                sendData: { uiAction_sendData: payload.params[0] }
+                sendData: {
+                    uiAction_sendData: payload.params[0],
+                },
+                electronOptions: {
+                    width: 580,
+                    height: 550,
+                    alwaysOnTop: true,
+                    enableLargerThanScreen: false,
+                    resizable: true
+                },
             });
 
             BlurOverlay.enable();
 
-            modalWindow.on('hidden', () => {
+            modalWindow.on('closed', () => {
                 BlurOverlay.disable();
 
                 // user cancelled?
@@ -69,7 +78,8 @@ module.exports = class extends BaseProcessor {
             });
 
             ipc.once('backendAction_unlockedAccountAndSentTransaction', (ev, err, result) => {
-                if (Windows.getById(ev.sender.id) === modalWindow && !modalWindow.isClosed) {
+                if (Windows.getById(ev.sender.id) === modalWindow
+                        && !modalWindow.isClosed) {
                     if (err || !result) {
                         this._log.debug('Confirmation error', err);
 

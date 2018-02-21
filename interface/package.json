@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ethereum/mist.git"
+    "url": "git+https://github.com/ellaism/ellagem.git"
   },
   "keywords": [
     "ethereum",
@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/ethereum/mist#readme",
   "dependencies": {
-    "babel-runtime": "^6.18.0"
+    "babel-runtime": "^6.26.0"
   }
 }

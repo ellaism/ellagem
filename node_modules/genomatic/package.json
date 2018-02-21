@@ -1,0 +1,37 @@
+{
+  "name": "genomatic",
+  "version": "1.0.0",
+  "description": "Utility methods for working with Generator functions, such as bind(), is(), etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hiddentao/genomatic.git"
+  },
+  "keywords": [
+    "generator",
+    "function",
+    "tools",
+    "utilities",
+    "bind"
+  ],
+  "author": "Ramesh Nair <ram@hiddentao.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hiddentao/genomatic/issues"
+  },
+  "homepage": "https://github.com/hiddentao/genomatic",
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "co-mocha": "^1.1.0",
+    "gulp": "~3.8.1",
+    "gulp-mocha": "~0.4.1",
+    "mocha": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "engine-strict": true
+}

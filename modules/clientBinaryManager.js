@@ -6,17 +6,17 @@ const got = require('got');
 const path = require('path');
 const Settings = require('./settings');
 const Windows = require('./windows');
-const ClientBinaryManager = require('ethereum-client-binaries').Manager;
+const ClientBinaryManager = require('ellaism-client-binaries').Manager;
 const EventEmitter = require('events').EventEmitter;
 
 const log = require('./utils/logger').create('ClientBinaryManager');
 
 
 // should be       'https://raw.githubusercontent.com/ethereum/mist/master/clientBinaries.json'
-const BINARY_URL = 'https://raw.githubusercontent.com/ethereum/mist/master/clientBinaries.json';
+const BINARY_URL = 'https://raw.githubusercontent.com/ellaism-io/ellagem/develop/clientBinaries.json';
 
 const ALLOWED_DOWNLOAD_URLS_REGEX =
-    /^https:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?ethereum\.org\/|gethstore\.blob\.core\.windows\.net\/|bintray\.com\/artifact\/download\/karalabe\/ethereum\/)(?:.+)/;  // eslint-disable-line max-len
+    /^https:\/\/(?:(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)?github\.com\/|ethereum\.org\/|gethstore\.blob\.core\.windows\.net\/|bintray\.com\/artifact\/download\/karalabe\/ethereum\/)(?:.+)/;  // eslint-disable-line max-len
 
 class Manager extends EventEmitter {
     constructor() {
@@ -48,7 +48,7 @@ class Manager extends EventEmitter {
     }
 
     _checkForNewConfig(restart) {
-        const nodeType = 'Geth';
+        const nodeType = 'Parity';
         let binariesDownloaded = false;
         let nodeInfo;
 
@@ -128,7 +128,16 @@ class Manager extends EventEmitter {
 
                     log.debug('New client binaries config found, asking user if they wish to update...');
 
-                    const wnd = Windows.createPopup('clientUpdateAvailable', {
+                    const wnd = Windows.createPopup('clientUpdateAvailable', _.extend({
+                        useWeb3: false,
+                        electronOptions: {
+                            width: 600,
+                            height: 340,
+                            alwaysOnTop: false,
+                            resizable: false,
+                            maximizable: false,
+                        },
+                    }, {
                         sendData: {
                             uiAction_sendData: {
                                 name: nodeType,
@@ -138,7 +147,7 @@ class Manager extends EventEmitter {
                                 restart,
                             },
                         },
-                    }, (update) => {
+                    }), (update) => {
                         // update
                         if (update === 'update') {
                             this._writeLocalConfig(latestConfig);
@@ -184,6 +193,7 @@ class Manager extends EventEmitter {
             return mgr.init({
                 folders: [
                     path.join(Settings.userDataPath, 'binaries', 'Geth', 'unpacked'),
+                    path.join(Settings.userDataPath, 'binaries', 'Parity', 'unpacked'),
                     path.join(Settings.userDataPath, 'binaries', 'Eth', 'unpacked'),
                 ],
             })
@@ -206,7 +216,6 @@ class Manager extends EventEmitter {
 
                         return mgr.download(c.id, {
                             downloadFolder: path.join(Settings.userDataPath, 'binaries'),
-                            urlRegex: ALLOWED_DOWNLOAD_URLS_REGEX,
                         });
                     });
                 }

@@ -7,7 +7,7 @@ const { ipcMain, ipcRenderer } = require('electron');
  * Sync IPC calls received from given window into given db table.
  * @param  {Object} coll Db collection to save to.
  */
-exports.initializeListeners = function () {
+exports.backendSyncInit = function () {
     let log = require('./utils/logger').create('dbSync'),
         db = require('./db'),
         ipc = ipcMain;

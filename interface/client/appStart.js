@@ -1,12 +1,10 @@
-const { getLanguage } = require('./actions.js');
-
 /**
 The init function of Mist
 
 @method mistInit
 */
 mistInit = function () {
-    console.info('Initialise Mist Interface');
+    console.info('Initialise Ellagem Interface');
 
     EthBlocks.init();
     const ethBlocksInterval = setInterval(() => {
@@ -29,8 +27,8 @@ mistInit = function () {
 
             Tabs.insert({
                 _id: 'browser',
-                url: 'https://ethereum.org',
-                redirect: 'https://ethereum.org',
+                url: 'https://ellaism.io',
+                redirect: 'https://ellaism.io',
                 position: 0
             });
         } else {
@@ -47,14 +45,15 @@ mistInit = function () {
             { _id: 'wallet' },
             {
                 $set: {
-                    url: 'https://wallet.ethereum.org',
-                    redirect: 'https://wallet.ethereum.org',
+                    url: 'https://wallet.ellaism.io',
+                    redirect: 'https://wallet.ellaism.io',
                     position: 1,
                     permissions: {
                         admin: true
                     }
                 }
-            });
+            }
+          );
 
         // Sets browser as default tab if:
         // 1) there's no record of selected tab
@@ -74,7 +73,9 @@ Meteor.startup(function () {
         mistInit();
     }
 
-    store.dispatch(getLanguage());
+    console.debug('Setting language');
+
+    TAPi18n.setLanguage(ipc.sendSync('backendAction_getLanguage'));
 
     // change moment and numeral language, when language changes
     Tracker.autorun(function () {

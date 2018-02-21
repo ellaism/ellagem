@@ -24,7 +24,7 @@ const check = exports.check = () => {
         break;
     }
 
-    return got('https://api.github.com/repos/ethereum/mist/releases', {
+    return got('https://api.github.com/repos/ellaism-io/ellagem/releases', {
         timeout: 3000,
         json: true,
     })
@@ -65,7 +65,16 @@ const check = exports.check = () => {
 function showWindow(options) {
     log.debug('Show update checker window');
 
-    return Windows.createPopup('updateAvailable', options);
+    return Windows.createPopup('updateAvailable', _.extend({
+        useWeb3: false,
+        electronOptions: {
+            width: 580,
+            height: 250,
+            alwaysOnTop: true,
+            resizable: false,
+            maximizable: false,
+        },
+    }, options));
 }
 
 
@@ -78,7 +87,6 @@ exports.run = () => {
                 },
             });
         }
-        store.dispatch({ type: '[MAIN]:UPDATE_CHECKER:FINISHED' });
     }).catch((err) => {
         log.error(err);
     });

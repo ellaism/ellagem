@@ -1,53 +1,30 @@
-# Mist Browser<sup>beta</sup>
+# Custom Mist Browser (Codename Ellagem)
 
-[![Github All Releases](https://img.shields.io/github/downloads/ethereum/mist/total.svg)]()
-[![Build Status develop branch](https://travis-ci.org/ethereum/mist.svg?branch=develop)](https://travis-ci.org/ethereum/mist)
-[![Join the chat at https://gitter.im/ethereum/mist](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/mist)
-[![Code Triagers Badge](https://www.codetriage.com/ethereum/mist/badges/users.svg)](https://www.codetriage.com/ethereum/mist)
-
+[![Build Status](https://travis-ci.org/ellaism-io/ellagem.svg?branch=develop)](https://travis-ci.org/ellaism-io/ellagem)
 
 The Mist browser is the tool of choice to browse and use Ðapps.
 
 For the Mist API see the [MISTAPI.md](MISTAPI.md).
 
-Please note that this repository is the Electron host for the Meteor based wallet dapp whose repository is located here: https://github.com/ethereum/meteor-dapp-wallet.
+Please note that this repository is the Electron host for the Meteor based wallet dapp whose repository is located here: https://github.com/ellaism-io/meteor-dapp-wallet.
 
 ## Help and troubleshooting
 
-In order to get help regarding Mist or Ethereum Wallet, please follow:
-
-1. Please check the [Mist troubleshooting guide](https://github.com/ethereum/mist/wiki).
-1. Go to the [Gitter Channel](https://gitter.im/ethereum/mist) to connect with the community for instant help.
-1. Search for [similar issues](https://github.com/ethereum/mist/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Canonical%22) and potential help.
-1. Or create a [new issue](https://github.com/ethereum/mist/issues).
-
-## How to contribute
-
-Contributions via Pull Requests are so welcome. You can see where to help looking for issues with the [Enhancement](https://github.com/ethereum/mist/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Enhancement%22) or [Bug](https://github.com/ethereum/mist/issues?q=is%3Aopen+is%3Aissue+label%3A%22Type%3A+Bug%22) labels. We can help guiding you towards the solution.
-
-You can also help by [responding to issues](https://github.com/ethereum/mist/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Triage%22). Sign up on [CodeTriage](https://www.codetriage.com/ethereum/mist) and it'll send you gentle notifications with a configurable frequency. It is a nice way to help while learning.
+Please check the [Mist troubleshooting guide](https://github.com/ellaism-io/ellagem/wiki).
 
 ## Installation
 
-If you want to install the app from a pre-built version on the [release page](https://github.com/ethereum/mist/releases),
+If you want to install the app from a pre-built version on the [release page](https://github.com/ellaism-io/ellagem/releases),
 you can simply run the executeable after download.
 
 For updating simply download the new version and copy it over the old one (keep a backup of the old one if you want to be sure).
 
-#### Linux .zip installs
-
-In order to install from .zip files, please install `libgconf2-4` first:
-
-```
-apt-get install libgconf2-4
-```
-
 #### Config folder
 The data folder for Mist is stored in other places:
 
-- Windows `%APPDATA%\Mist`
-- macOS `~/Library/Application\ Support/Mist`
-- Linux `~/.config/Mist`
+- Windows `%APPDATA%\Ellagem`
+- macOS `~/Library/Application\ Support/Ellagem`
+- Linux `~/.config/Ellagem`
 
 
 ## Development
@@ -76,13 +53,13 @@ Install the latter ones via:
 
 Now you're ready to initialise Mist for development:
 
-    $ git clone https://github.com/ethereum/mist.git
-    $ cd mist
+    $ git clone https://github.com/ellaism-io/ellagem.git
+    $ cd ellagem
     $ yarn
 
 To update Mist in the future, run:
 
-    $ cd mist
+    $ cd ellagem
     $ git pull
     $ yarn
 
@@ -91,11 +68,11 @@ To update Mist in the future, run:
 For development we start the interface with a Meteor server for autoreload etc.
 *Start the interface in a separate terminal window:*
 
-    $ cd mist/interface && meteor --no-release-check
+    $ cd ellagem/interface && meteor --no-release-check
 
 In the original window you can then start Mist with:
 
-    $ cd mist
+    $ cd ellagem
     $ yarn dev:electron
 
 *NOTE: client-binaries (e.g. [geth](https://github.com/ethereum/go-ethereum)) specified in [clientBinaries.json](https://github.com/ethereum/mist/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
@@ -114,7 +91,7 @@ Start the wallet app for development, *in a separate terminal window:*
 
 In the original window you can then start Mist using wallet mode:
 
-    $ cd mist
+    $ cd ellagem
     $ yarn dev:electron --mode wallet
 
 

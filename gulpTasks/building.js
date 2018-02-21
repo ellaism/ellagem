@@ -13,7 +13,7 @@ const version = require('../package.json').version;
 
 
 const type = options.type;
-const applicationName = (options.wallet) ? 'Ethereum Wallet' : 'Mist';
+const applicationName = (options.wallet) ? 'Ellagem Wallet' : 'Ellagem';
 
 
 gulp.task('clean-dist', (cb) => {
@@ -33,6 +33,7 @@ gulp.task('copy-app-source-files', () => {
         './tests/**/*.*',
         '!./tests/wallet/*',
         `./icons/${type}/*`,
+        `./icons/*.*`,
         './sounds/*',
         './errorPages/*',
         'customProtocols.js'
@@ -91,9 +92,9 @@ gulp.task('bundling-interface', (cb) => {
             bundle(`&& cd ../../meteor-dapp-wallet/app \
                 && meteor-build-client ../../mist/dist_${type}/app/interface/wallet -p ""`);
         } else {
-            console.log(`Pulling https://github.com/ethereum/meteor-dapp-wallet/tree/${options.walletSource} "${options.walletSource}" branch...`);
+            console.log(`Pulling https://github.com/ellaism-io/meteor-dapp-wallet/tree/${options.walletSource} "${options.walletSource}" branch...`);
             bundle(`&& cd ../dist_${type} \
-                && git clone --depth 1 https://github.com/ethereum/meteor-dapp-wallet.git \
+                && git clone --depth 1 https://github.com/ellaism-io/meteor-dapp-wallet.git \
                 && cd meteor-dapp-wallet/app \
                 && meteor-build-client ../../app/interface/wallet -p "" \
                 && cd ../../ \
@@ -121,7 +122,7 @@ gulp.task('build-dist', (cb) => {
         name: applicationName.replace(/\s/, ''),
         productName: applicationName,
         description: applicationName,
-        homepage: 'https://github.com/ethereum/mist',
+        homepage: 'https://github.com/ellaism-io/ellagem',
         build: {
             appId: `com.ethereum.${type}`,
             asar: true,
@@ -228,14 +229,9 @@ gulp.task('release-dist', (done) => {
             break;
         case 'mac':
             cp(
-                path.join('mac', `${applicationName}-${version}.dmg`),
-                `${appNameHypen}-macosx-${versionDashed}.dmg`);
+                path.join(`${applicationName}-${version}.dmg`), `${appNameHypen}-macosx-${versionDashed}.dmg`);
             break;
         case 'linux':
-            cp(
-                `${appNameNoSpace}_${version}_i386.deb`, `${appNameHypen}-linux32-${versionDashed}.deb`);
-            cp(
-                `${appNameNoSpace}-${version}-ia32.zip`, `${appNameHypen}-linux32-${versionDashed}.zip`);
             cp(
                 `${appNameNoSpace}_${version}_amd64.deb`, `${appNameHypen}-linux64-${versionDashed}.deb`);
             cp(

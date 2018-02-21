@@ -2,271 +2,319 @@
     "mist": {
         "applicationMenu": {
             "app": {
-                "label": "__app__",
-                "about": "Über __app__",
-                "checkForUpdates": "Nach Aktualisierungen suchen...",
-                "checkForNodeUpdates": "Nach Ethereum Softwareknoten Aktualisierungen suchen...",
-                "services": "Dienste",
-                "hide": "__app__ ausblenden",
-                "hideOthers": "Andere ausblenden",
-                "showAll": "Alle einblenden",
-                "quit": "__app__ schließen"
-            },
-            "edit": {
-                "label": "Bearbeiten",
-                "undo": "Rückgängig",
-                "redo": "Wiederholen",
-                "cut": "Ausschneiden",
-                "copy": "Kopieren",
-                "paste": "Einfügen",
-                "selectAll": "Alles auswählen"
-            },
-            "view": {
-                "label": "Ansicht",
-                "fullscreen": "Vollbildmodus",
-                "default": "Standard"
+                "label": "Ellagem",
+                "about": "About Ellagem",
+                "walletsafety": "Wallet safety tips",
+                "checkForUpdates": "Check for updates...",
+                "checkForNodeUpdates": "Check for Ellaism node updates...",
+                "services": "Services",
+                "hide": "Hide Ellagem",
+                "hideOthers": "Hide others",
+                "showAll": "Show all",
+                "quit": "Quit Ellagem"
             },
             "file": {
-                "label": "Konten",
-                "importPresale": "Konto importieren",
-                "newAccount": "Neues Konto",
-                "backup": "Sicherung",
-                "backupKeyStore": "Konten",
-                "backupMist": "Anwendungsdaten"
+                "label": "Accounts",
+                "importPresale": "Import accounts",
+                "newAccount": "New account",
+                "backup": "Backup",
+                "backupKeyStore": "Key Files",
+                "backupMist": "Application data",
+                "swarmUpload": "Upload to Swarm..."
+            },
+            "edit": {
+                "label": "Edit",
+                "undo": "Undo",
+                "redo": "Redo",
+                "cut": "Cut",
+                "copy": "Copy",
+                "paste": "Paste",
+                "selectAll": "Select all"
+            },
+            "view": {
+                "label": "View",
+                "fullscreen": "Toggle full screen",
+                "languages": "Language",
+                "default": "Default",
+                "langCodes": {
+                    "ca": "Català",
+                    "de": "Deutsch",
+                    "en": "English",
+                    "es": "Español",
+                    "fa": "فارسى",
+                    "fr": "Français",
+                    "it": "Italiano",
+                    "ja": "日本語",
+                    "ko": "한국어 ",
+                    "nl": "Nederlands",
+                    "nb": "Norsk",
+                    "pt": "Português",
+                    "sq": "Shqip",
+                    "ru": "Pусский",
+                    "zh": "普通話",
+                    "zh-TW": "國語"
+                }
             },
             "develop": {
-                "uploadToSwarm": "Upload zum Swarm",
-                "label": "Entwicklung",
-                "devTools": "Entwicklerwerkzeuge",
-                "devToolsMistUI": "Mist UI",
+                "label": "Develop",
+                "devTools": "Toggle developer tools",
+                "devToolsMistUI": "Ellagem UI",
                 "devToolsWalletUI": "Wallet UI",
                 "devToolsWebview": "__webview__",
-                "runTests": "Tests durchführen",
-                "logFiles": "Logdatei anzeigen",
-                "openRemix": "Remix IDE öffnen",
-                "ethereumNode": "Ethereum Softwareknoten",
-                "network": "Netzwerk",
-                "mainNetwork": "Hauptnetzwerk",
-                "startMining": "⛏ Mining starten",
-                "stopMining": "⛏ Mining stoppen",
-                "externalNode": "externer Softwareknoten aktiv",
-                "nodeMode": "Chain herunterladen",
-                "fullNode": "Komplette Blockchain speichern",
-                "lightNode": "Light Node speichern (experimentell!)"
+                "runTests": "Run tests",
+                "logFiles": "Show log file",
+                "openRemix": "Open Remix IDE",
+                "externalNode": "using external node",
+                "ethereumNode": "Ellaism Node",
+                "network": "Network",
+                "mainNetwork": "Main Network",
+                "nodeMode": "Chain download",
+                "fullNode": "Store full blockchain",
+                "lightNode": "Use light Node (experimental!)",
+                "startMining": "⛏ Start mining",
+                "stopMining": "⛏ Stop mining"
             },
             "window": {
-                "label": "Fenster",
-                "minimize": "Minimieren",
-                "close": "Schließen",
-                "toFront": "Alle Fenster in den Vordergrund"
+                "label": "Window",
+                "minimize": "Minimize",
+                "close": "Close",
+                "toFront": "Bring all to front"
             },
             "help": {
-                "label": "Hilfe",
-                "reportBug": "Ein Problem melden"
+                "label": "Help",
+                "walletsafety": "Wallet Safety Tips",
+                "mistWiki": "Troubleshooting and Help",
+                "gitter": "Mist channel on Gitter",
+                "reportBug": "Report an issue on Github",
+                "learnmore": "Learn more about ellaism"
+            },
+            "community": {
+                "label": "Community",
+                "voting": "Carbon Voting",
+                "boards": "Message Boards",
+                "twitter": "Tweet Us",
+                "pools": "Mining Pools ⛏",
+                "marketinfo": "Market Info",
+                "coinprice": "Coin Price"
+            },
+            "exchanges": {
+                "label": "Exchanges",
+                "cryptopia": "Cryptopia",
+                "stocks": "Stocks.Exchange",
+                "bisq": "Bisq P2P Exchange"
             }
         },
         "errors": {
-            "nodeConnect": "Es konnte keine Verbindung mit dem Softwareknoten hergestellt werden. Weitere Informationen finden sich in den Logdateien.",
-            "nodeStartup": "Anscheinend konnte der Softwareknoten nicht gestartet werden, läuft evtl. schon eine andere Instanz? Oder läuft eventuell gerade ein Datenbank-Update?",
+            "nodeConnect": "Couldn't connect to node? See the logs for more:",
+            "nodeStartup": "It seems like the node couldn't be started.  Do you already have one running? Is it upgrading the database right now?",
             "timeSync": {
-                "title": "Deine Computeruhr ist nicht synchronisiert!",
-                "description": "Um mit dem Ethereum-Netzwerk zu synchronisieren muss deine Computeruhr mit einem Zeitserver synchronisiert werden.",
-                "win32": "Gehe dazu in deine Internet Zeit Einstellungen in deinen System Einstellungen and checke die Box. Siehe diese Anleitung für Details: http://www.guidingtech.com/3119/windows-clock-sync/",
-                "linux": "Um Zeit Synchronisation einzuschalten installiere \"ntp\" via \"apt-get install ntp\".",
-                "darwin": "Um Zeit Synchronisation einzuschalten, öffne die System Einstellungen und checke \"Zeit Datum automatisch\"."
+                "title": "Your computer's clock is not synced.",
+                "description": "To successfully synchronize with the Ellaism network, you need to sync your computer's clock with a time sync server.",
+                "win32": "Go to your Internet Time Settings in your system preferences and check the box. See this guide for details: http://www.guidingtech.com/3119/windows-clock-sync/",
+                "linux": "To enable a time sync server, install \"ntp\" via \"apt-get install ntp\".",
+                "darwin": "To enable time sync, open the time preferences and check \"Set the time and date automatically\"."
             },
-            "nodeChecksumMismatch": {
-                "title": "Prüfsumme des heruntergeladenen Softwareknotens stimmt nicht überein!",
-                "description": "__algorithm__: __hash__\n\nBitte installiere den Softwareknoten __type__ in Version __version__ manuell."
+           "nodeChecksumMismatch": {
+                "title": "Checksum mismatch in downloaded node!",
+                "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
             },
             "legacyChain": {
-                "title": "Veraltete Chain erkannt",
-                "description": "Dein Softwareknoten ist zur Zeit auf der nicht unterstützten Ethereum Classic Chain. Um diese Chain zu nutzen, verwende die Tools vom Ethereum Classic Project unter\nhttps://ethereumclassic.github.io.\n\nUm zur Hauptchain von Ethereum zurückzukehren, folge den Schritten in diesem Tutorial:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+                "title": "Legacy chain detected",
+                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain, use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/ethereum/mist/releases/0.8.2"
             }
         },
         "rightClick": {
-            "reload": "Neu laden",
-            "openDevTools": "Entwicklerwerkzeuge öffnen",
-            "inspectElements": "Element prüfen"
+            "reload": "Reload",
+            "openDevTools": "Open developer tools",
+            "inspectElements": "Inspect element"
         },
         "nodeInfo": {
-            "nodeSyncing": "__blockDiff__ Blöcke übrig",
-            "blockReceived": "Neuer Block empfangen",
-            "timeSinceBlock": "Abgelaufene Zeit seit dem letzten Block",
-            "blockNumber": "Ihre letzte Blocknummer",
-            "testnetExplain": "Du bist mit dem Testnetz verbunden, SENDE KEINE echten Ether an diese Adressen",
-            "peers": "Peers",
-            "checkingWhichNetwork": "Überprüfe Netzwerk...",
-            "mainNetwork": "Hauptnetzwerk",
-            "testNetwork": "Testnetzwerk",
-            "privateNetwork": "Privates Netzwerk",
-            "mainnetExplain": "Du bist mit dem globalen Hauptnetz von Ethereum verbunden",
-            "privatenetExplain": "Du bist mit einem privaten Netz verbunden, SENDE KEINE echten Ether an diese Adressen",
-            "unknownnetExplain": "Es konnte nicht bestimmt werden, welches Netzwerk du nutzt"
+            "nodeSyncing": "__blockDiff__ blocks left",
+            "blockReceived": "New block received",
+            "blockReceivedShort": "New block",
+            "blockNumber": "Your latest block number",
+            "timeSinceBlock": "Elapsed time since last block",
+            "checkingWhichNetwork": "Checking network...",
+            "mainNetwork": "Main-net",
+            "testNetwork": "Test-net",
+            "privateNetwork": "Private-net",
+            "mainnetExplain": "You are on the main Ellaism global network",
+            "testnetExplain": "You are on the __name__. DO NOT SEND any real Ella to these addresses",
+            "privatenetExplain": "You are on a private net. DO NOT SEND any real ella to these addresses",
+            "unknownnetExplain": "Unable to determine which network you are on",
+            "peers": "peers"
         },
         "sidebar": {
             "buttons": {
-                "browser": "Browser"
+                "browser": "Browse"
+            },
+            "submenu": {
+                "account": "Account",
+                "account_plural": "Accounts",
+                "connectAccounts": "Connect Accounts"
             }
         },
         "browserBar": {
             "buttons": {
-                "noAccounts": "Keine Konten vorhanden",
-                "connect": "Verbinden"
+                "noAccounts": "No accounts set",
+                "connect": "Connect"
             }
         },
         "startScreen": {
-            "runningNodeFound": "Laufender Ethereum Softwareknoten gefunden!",
-            "startingNode": "Starte Ethereum Softwareknoten...",
-            "startedNode": "Starte Anwendung...",
-            "nodeConnectionTimeout": "Ethereum Softwareknoten konnte nicht gestartet werden!<br><small>Wenn du <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth installiert hast,</a>, verwende bitte diesen Befehl, um Geth zu starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'>oder sende einen Fehlerreport</a></small>",
-            "nodeBinaryNotFound": "Keine Programmdatei für den Ethereum Softwareknoten gefunden!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Bitte starte den Ethereum Softwareknoten manuell. </a> </small>",
-            "nodeSyncing": "Ethereum Softwareknoten muss synchronisieren, bitte warten...",
-            "nodeSyncInfo": "Block __displayBlock__ von __highestBlock__ wird heruntergeladen.",
-            "nodeSyncConnecting": "Suche nach Peers...",
-            "peerSearchTimeout": "Peer-Suche überspringen",
-            "stoppingNode": "Stoppe Ethereum Softwareknoten...",
-            "nodeStarting": "Ethereum Softwareknoten startet...",
-            "nodeStarted": "Ethereum Softwareknoten gestartet",
-            "nodeConnected": "Ethereum Softwareknoten verbunden",
-            "nodeStopping": "Ethereum Softwareknoten stoppt...",
-            "nodeStopped": "Ethereum Softwareknoten gestoppt",
-            "nodeError": "Verbindungsproblem zum Ethereum Softwareknoten :'(",
-            "unableToBindPort": "Ethereum Softwareknoten kann nicht gestartet werden. Läuft bereits eine andere Instanz?",
-            "nodeSyncInfoStates": "Lade Block __displayBlock__ von __highestBlock__, <br> Lade chain structure __displayState__ von __displayKnownStates__",
-            "nodeSyncFoundPeers": "Verbinde mit __peers__ Peers...",
-            "launchApp": "Starte die Anwendung",
+            "runningNodeFound": "Found running Ellaism node!",
+            "startingNode": "Starting Ellaism node...",
+            "stoppingNode": "Stopping Ellaism node...",
+            "startedNode": "Starting application...",
+            "nodeConnectionTimeout": "Couldn't start Ellaism node!<br><small>If you <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>installed Geth</a>, use this command to run it: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> Or report an issue </a></small>",
+            "nodeBinaryNotFound": "No Ellaism node binary found!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Please start one manually before. </a> </small>",
+            "nodeStarting": "Ellaism node starting up...",
+            "nodeStarted": "Ellaism node started",
+            "nodeConnected": "Ellaism node connected",
+            "nodeStopping": "Ellaism node stopping...",
+            "nodeStopped": "Ellaism node stopped",
+            "nodeError": "Ellaism node connection error:'(",
+            "unableToBindPort": "Ellaism node cannot run. Is another instance already running?",
+            "nodeSyncing": "Ellaism node needs to sync, please wait...",
+            "nodeSyncInfo": "Downloading block __displayBlock__ of __highestBlock__",
+            "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
+            "nodeSyncConnecting": "Looking for peers...",
+            "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
+            "peerSearchTimeout": "Skip peer search",
+            "launchApp": "Launch Application",
             "clientBinaries": {
-                "scanning": "Suche nach Softwareknoten Aktualisierung...",
-                "downloading": "Lade neue Softwareknoten-Version herunter...",
-                "loadConfig": "Lade Softwareknoten Konfiguration...",
+                "scanning": "Checking for node update...",
+                "downloading": "Downloading new node...",
+                "loadConfig": "Loading client config...",
                 "filtering": "Filtering client binaries...",
-                "done": "Ethereum Softwareknoten aktuell...",
-                "error": "Ethereum Softwareknoten konnte nicht gestartet werden."
+                "done": "Ellaism node up-to-date...",
+                "error": "Error running downloaded binary."
             }
         },
         "popupWindows": {
+            "updateAvailable": {
+                "newVersionAvailable": "New __name__ version available",
+                "version": "Version",
+                "downloadURL": "Download URL",
+                "checksum": "Checksum",
+                "downloadAndRestart": "Update and Restart",
+                "download": "Download new version",
+                "skipUpdate": "Skip Update",
+                "notNow": "Ask me later",
+                "checking": "Checking for updates to __name__...",
+                "noUpdateFound": "No update found. You are running the latest version of __name__."
+            },
             "requestAccount": {
-                "title": "Konto anlegen",
-                "enterPassword": "Passwort eingeben",
-                "repeatPassword": "Passwort wiederholen",
-                "creating": "Konto wird angelegt...",
+                "title": "Create account",
+                "enterPassword": "Enter password",
+                "repeatPassword": "Repeat password",
+                "creating": "Generating account...",
+                "backupHint": "Make sure you backup your keyfiles AND password!\n\nYou can find your keyfiles folder using the main menu -> Accounts -> Backup -> Accounts. Keep a copy of the \"keystore\" folder where you can't lose it!",
                 "errors": {
-                    "passwordMismatch": "Die Passwörter stimmen nicht überein.",
-                    "passwordTooShort": "Wähle ein längeres Passwort..."
+                    "passwordMismatch": "Your passwords don't match.",
+                    "passwordTooShort": "Make a longer password"
                 }
             },
             "unlockMasterPassword": {
-                "title": "Master-Passwort eingeben",
-                "enterPassword": "Gib das Master-Passwort ein",
-                "unlocking": "Entschlüsseln...",
+                "title": "Enter master password",
+                "enterPassword": "Enter master password",
+                "unlocking": "Unlocking...",
                 "errors": {
-                    "wrongPassword": "Passwort falsch, bitte nochmals versuchen."
+                    "wrongPassword": "Password is wrong. Try again."
                 }
             },
             "sendTransactionConfirmation": {
                 "title": {
-                    "sendTransaction": "Transaktion senden",
-                    "contractExecution": "Vertrag ausführen",
-                    "createContract": "Vertrag anlegen"
+                    "sendTransaction": "Send transaction",
+                    "contractExecution": "Execute contract",
+                    "createContract": "Create contract"
                 },
-                "contractExecutionInfo": "Du bist dabei, eine Vertragsfunktion auszuführen. Das kann zur Übertragung eines Geldwertes führen.",
-                "contractCreationInfo": "Du bist dabei, auf Basis der eingegebenen Daten einen Vertrag anzulegen.",
-                "enterPassword": "Bitte gib das Passwort ein, um die Transaktion durchzuführen.",
-                "unlocking": "Warten auf Bestätigung...",
-                "createContract": "Vertrag anlegen",
-                "estimatedFee": "Geschätzter Gebührenbetrag",
-                "estimatedGasError": "Der Auftrag kann nicht ausgeführt werden, da er das gesamte vorgegebene Gas verbrauchen würde.",
-                "gasPrice": "Gaspreis",
-                "perMillionGas": "Ether pro Millionen Gas",
-                "data": "Daten",
+                "contractExecutionInfo": "You are about to execute a function on a contract. This might involve transfer of value.",
+                "contractCreationInfo": "You are about to create a contract from the provided data.",
+                "enterPassword": "Enter password to confirm the transaction",
+                "unlocking": "Confirming...",
+                "createContract": "Create contract",
+                "estimatedFee": "Estimated fee consumption",
+                "estimatedGasError": "It seems this transaction will fail. If you submit it, it may consume all the gas you provide.",
+                "transactionThrow": "The contract won't allow this transaction to be executed",
+                "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+                "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount.",
+                "noEstimate": "We couldn't estimate the gas.",
+                "gasPrice": "Gas price",
+                "perMillionGas": "ether per million gas",
+                "gasLimit": "Provide maximum fee",
+                "data": "Raw Data",
+                "parameters": "Parameters",
                 "buttons": {
-                    "sendTransaction": "Transaktion absenden"
+                    "sendTransaction": "Send transaction"
                 },
                 "errors": {
-                    "connectionTimeout": "Eine Verbindung mit dem Softwareknoten war nicht möglich, eventuell ist der Softwareknoten im Hintergrund abgestürzt?",
-                    "wrongPassword": "Falsches Passwort",
-                    "multipleKeysMatchAddress": "Mehrere Konten stimmen mit der Adresse überein, bitte entferne Duplikate aus dem keystore Verzeichnis (Menü -> Konten -> Sicherung -> Konten)",
-                    "insufficientFundsForGas": "Zu wenig Mittel im Hauptkonto (etherbase) um für Gas zu bezahlen",
-                    "sameAccount": "Kann nicht zum gleichen Konto schicken."
+                    "connectionTimeout": "Couldn't connect to the node, did it crash in the background?",
+                    "wrongPassword": "Wrong password",
+                    "multipleKeysMatchAddress": "Multiple keys match address.  Please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
+                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "sameAccount": "Can't send to itself"
                 },
-                "transactionThrow": "Der Vertrag wird diese Transaktion nicht ausführen können",
-                "noEstimate": "Transaktionsgebühr konnte nicht geschätzt werden.",
-                "gasLimit": "Maximal bereitgestellte Gebühr",
-                "parameters": "Parameter",
-                "showRawBytecode": "Zeige Rohdaten",
-                "showDecodedParameters": "Zeige dekodierte Parameter",
-                "lookupData": "Versuche die Daten zu dekodieren",
-                "lookupDataExplainer": "Schaue dies im Internet nach"
+                "showRawBytecode": "show raw data",
+                "showDecodedParameters": "show decoded parameters",
+                "lookupData": "Try to decode data",
+                "lookupDataExplainer": "Look this up on the internet"
             },
             "onboarding": {
-                "description": "Ethereum ist eine dezentrale Plattform, um Anwendungen auf einer Blockchain zu bauen: Fälschungssichere Software, die Werte und Vermögen übertragen kann und für immer besteht",
-                "goToTestnet": "Verwende das Testnetz (Rinkeby)",
-                "goToTestnetDescription": "Teste die Technologie frei in der Testnetz-Sandbox, ",
-                "gotoMainnet": "Verwende das Hauptnetz",
-                "gotoMainnetDescription": " Du wirst etwas Ether benötigen, um Verträge anzulegen und auszuführen. Wir werden dir helfen, etwas zu bekommen ...",
-                "doYouHaveAWalletFile": "Hast du eine Wallet-Datei?",
-                "walletFileDescription": "<p>Wallet-Datei zum importieren in dieses Fenster ziehen.<br>Wenn du 2014 am Ethereum-Pre-sale teilgenommen hast, solltest du über eine Datei mit dem Dateinamen <code>ethereum_wallet_backup.json</code> verfügen. Sie wurde nach dem Kauf heruntergeladen und dir auch per E-Mail geschickt.</p>",
-                "dropFilesHere": "Pre-sale Datei laden",
-                "creating": "Erstellen...",
-                "importing": "Importieren...",
-                "skip": "Diesen Schritt überspringen",
-                "next": "Nächster",
-                "protectTitle": "Schütze dein Konto",
-                "protectDescription": "Wähle ein Passwort für dein Konto. Mache es so stark, als wären es deine Hausschlüssel!",
-                "accountTitle": "Lade die Datei hoch!",
-                "accountTitleTestnet": "Ether minen!",
-                "etherDescription": "Das Ethereum Netz basiert auf einem Tokan namens “Ether”. Du benötigst eine kleine Menge davon, um irgendetwas auf dem Ethereum-Netz zu tun.",
-                "loadItDescription": "Wenn du bereits über Bitcoin oder eine andere Kryptowährung verfügst, kannst du diese mit Shapeshift einfach in Ether umtauschen. <br><br> Wir empfehlen, ca. <strong>0.25 bis 1 ether</strong> einzutauschen.",
-                "mineItDescription": "<strong>Auf dem Testnetz kannst du selbst Ether minen. Bitte gehe dazu in den Menüpunkt <em>Entwicklung</em> menu und wähle <em>Mining starten</em>. </strong> <br> <strong> VERSUCHE NICHT, ECHTE ETHER AN DIESE ADRESSE ZU SENDEN! </strong>",
-                "you": "DU",
-                "etherbase": "Hauptkonto (etherbase)",
-                "depositBitcoin": "Bitcoin eintauschen",
-                "learnIt": "Lerne Ethereum kennen, während du wartest",
-                "downloadingBlocks": "Blöcke werden heruntergeladen",
-                "tutorial1Description": "<p> Nun musst du lediglich warten, bis der Download abgeschlossen ist. Hier findest du weitere Informationen:</p> <h4>Make your own money </h4> <p> Erstelle eine eigene Kryptowährung mit einer festen Geldmenge, Token, die reale Vermögenswerte darstellen, und so weiter ...</p>",
-                "tutorial2Description": "<h4> Erstelle einen Crowdsale</h4> <p> Sammle Mittel für ein gemeinsames Ziel, vollkommen vertrauenswürdig ohne einen weiteren Dritten. Überwinde die Hürden von traditionellen Crowdfunding-Systemen und gehe direkt an die Quellen, indem du deine Organisation über die Blockchain mit Mitteln versorgst.</p>",
-                "tutorial3Description": "<h4> Blockchain-Organisation </h4> <p> Schaffe eine autonome Organisation, deren Grundsätze über Geldverwendung und Entscheidungen nicht gebrochen werden können. Gib deinen Unterstützern eine aktive Rolle, wie die Mittel verwendet werden sollen</p>",
+                "description": "Ellaism is a platform for decentralized blockchain apps with a fully featured programming language",
+                "goToTestnet": "Use the test network (NOT ONLINE)",
+                "goToTestnetDescription": "Test the technology freely in a sandboxed testnet, without using real Ether.",
+                "gotoMainnet": "Use the main network",
+                "gotoMainnetDescription": "You’ll need some Ether to create and execute contracts. Don't worry, we'll help you get some...",
+                "doYouHaveAWalletFile": "Do you have a wallet file?",
+                "walletFileDescription": "<p>Move any wallet file here to import.<br></p>",
+                "dropFilesHere": "Drop wallet file",
+                "creating": "Creating...",
+                "importing": "Importing...",
+                "skip": "Skip this step",
+                "next": "Next",
+                "protectTitle": "Protect your account",
+                "protectDescription": "Choose a password for your new account. Make it as strong as if it were to protect your house keys!",
+                "accountTitle": "Load it up!",
+                "accountTitleTestnet": "Mine some!",
+                "etherDescription": "The ellaism network is based on a token called “Ella”. You’ll need a small amount of it to do anything on the Ellaism network.",
+                "loadItDescription": "If you already own Bitcoin, or any other cryptocurrency, you can easily convert it to ether using Shapeshift. <br><br> We recommend loading somewhere between <strong>0.25 to 1 ether</strong>.",
+                "faucetDescription": "The Rinkeby testnet uses Clique Proof of Authority as a consensus mechanism, therefore there's no mining. If you want to get some test ether, head to the Rinkeby Faucet: <strong> faucet.rinkeby.io </strong>",
+                "you": "YOU",
+                "etherbase": "Main account (etherbase)",
+                "depositBitcoin": "Deposit using Bitcoin",
+                "viaShapeshift": "Instant conversion via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
+                "learnIt": "Learn while you wait",
+                "downloadingBlocks": "Downloading blocks",
+                "syncMessage": "Block __displayBlock__ of __highestBlockString__",
+                "syncMessageWithStates": "Block __displayBlock__ of __highestBlockString__ (Chain structure __statesPercent__%)",
+                "startingSync": "Getting ready to sync..",
+                "tutorial1Description": "<p> Now the only thing left to do is wait for the download to finish. Here are some reading suggestions: </p> <h4>Make your own money </h4> <p> Make a cryptocurrency with a fixed market supply, tokens representing real world assets, etc </p>",
+                "tutorial2Description": "<h4> Create a crowdsale </h4> <p> Raise funds for a common goal, fully trustable without a third party. Sidestep the hurdle of traditional funding system and go directly to the source by funding an organization via the blockchain.</p>",
+                "tutorial3Description": "<h4> Create a blockchain organization </h4> <p> Create an autonomous organization with rules on spending money and making decisions for you and your investors.</p>",
                 "buttons": {
-                    "showPassword": "Passwort anzeigen",
-                    "importAccount": "Konto importieren",
-                    "launchApp": "Anwendung wird gestartet!",
-                    "learnReceipt": "Lerne dieses Rezept kennen"
+                    "showPassword": "Show password",
+                    "importAccount": "Import account",
+                    "launchApp": "Launch Application!",
+                    "learnReceipt": "Learn this recipe"
                 },
                 "errors": {
-                    "nodeNotStartedYet": "Warte noch einige Sekunden, bis der Softwareknoten gestartet ist, und versuche es dann noch einmal",
-                    "unknownFile": "Datei nicht erkannt.",
-                    "wrongPassword": "Falsches Passwort.",
-                    "importFailed": "Beim Import der Datei ist folgender Fehler aufgetreten: __error__"
-                },
-                "viaShapeshift": "Sofortige Konversion via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
-                "syncMessage": "Block __displayBlock__ von __highestBlockString__",
-                "syncMessageWithStates": "Block __displayBlock__ von __highestBlockString__ (Chain Struktur __statesPercent__%)",
-                "startingSync": "Bereite Synchronisation vor.."
-            },
-            "updateAvailable": {
-                "newVersionAvailable": "Neue __name__ Version verfügbar",
-                "version": "Version",
-                "downloadURL": "Download URL",
-                "checksum": "Prüfsumme",
-                "downloadAndRestart": "Update und Neustart",
-                "download": "Neue Version herunterladen",
-                "skipUpdate": "Update überspringen",
-                "notNow": "Später erinnern",
-                "checking": "Suche nach Updates für __name__...",
-                "noUpdateFound": "Kein Update gefunden. Du verwendest die aktuellste Version von __name__."
+                    "nodeNotStartedYet": "Wait a few more seconds until your node is fully started and try again",
+                    "unknownFile": "File not recognised.",
+                    "wrongPassword": "Wrong password.",
+                    "importFailed": "Couldn't import the file, got: __error__"
+                }
             },
             "connectAccount": {
-                "chooseAccountTitle": "Wähle ein Konto",
-                "createAccount": "Erstelle ein neues Konto",
-                "pinToSidebar": "App an die Seitenleiste pinnen",
-                "connectAccountDescription": "Du teilst deine Identität mit __dappName__. Das erlaubt der App jegliche öffentliche Informationen deiner Konten sowie den damit verbundenen Bilanzen zu sehen."
+                "chooseAccountTitle": "Choose account",
+                "createAccount": "Create new account",
+                "pinToSidebar": "Pin app to the sidebar",
+                "connectAccountDescription": "You are sharing your identity with __dappName__. This allows the app to see any public information related to your accounts, including balances connected to it."
             }
         }
     },
     "elements": {
-        "checksumAlert": "Diese Adresse sieht gültig aus, aber ihr fehlen einige Sicherheits-Features, die dich z.B. gegen Tippfehler schützen könnten. Bitte prüfe daher nochmals, ob du die Adresse richtig eingegeben hast. Sofern vorhanden, prüfe bitte auch, ob das Sicherheits-Icon übereinstimmt. ",
-        "identiconHelper": "Dies ist ein Sicherheits-Icon. Bei einer abweichenden Adresse sollte das Sicherheits-Icon völlig anders aussehen.",
+        "checksumAlert":"This address looks valid, but it doesn't have some security features that will protect you against typos, so double check you have the right one. If provided, check if the security icon matches.",
+        "identiconHelper": "This is a security icon.  If there were any change to the address, the resulting icon would be a completely different one",
         "type": {
             "address": "Address",
             "bool": "Boolean",

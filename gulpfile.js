@@ -36,7 +36,7 @@ const options = minimist(args, {
 
 
 // echo version info and usage hints
-console.log('Mist version:', require('./package.json').version);
+console.log('Ellagem version:', require('./package.json').version);
 console.log('Electron version:', require('electron/package.json').version);
 
 if (_.isEmpty(_.intersection(args, ['--wallet']))) {

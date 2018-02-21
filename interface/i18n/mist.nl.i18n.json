@@ -2,31 +2,42 @@
     "mist": {
         "applicationMenu": {
             "app": {
-                "label": "__app__",
-                "about": "Over __app__",
-                "checkForUpdates": "Op updates controleren...",
-                "checkForNodeUpdates": "Controleer op Ethereum node updates...",
-                "services": "Diensten",
-                "hide": "__app__ verbergen",
-                "hideOthers": "Andere verbergen",
-                "showAll": "Alles weergeven",
-                "quit": "__app__ afsluiten"
+                "label": "Ellagem",
+                "about": "About Ellagem",
+                "walletsafety": "Wallet safety tips",
+                "checkForUpdates": "Check for updates...",
+                "checkForNodeUpdates": "Check for Ellaism node updates...",
+                "services": "Services",
+                "hide": "Hide Ellagem",
+                "hideOthers": "Hide others",
+                "showAll": "Show all",
+                "quit": "Quit Ellagem"
+            },
+            "file": {
+                "label": "Accounts",
+                "importPresale": "Import accounts",
+                "newAccount": "New account",
+                "backup": "Backup",
+                "backupKeyStore": "Key Files",
+                "backupMist": "Application data",
+                "swarmUpload": "Upload to Swarm..."
             },
             "edit": {
-                "label": "Bewerken",
-                "undo": "Ongedaan maken",
-                "redo": "Overdoen",
-                "cut": "Knippen",
-                "copy": "Kopieren",
-                "paste": "Plakken",
-                "selectAll": "Alles selecteren"
+                "label": "Edit",
+                "undo": "Undo",
+                "redo": "Redo",
+                "cut": "Cut",
+                "copy": "Copy",
+                "paste": "Paste",
+                "selectAll": "Select all"
             },
             "view": {
-                "label": "Weergave",
-                "fullscreen": "Volledig Scherm Inschakelen",
-                "languages": "Wijzig taal",
-                "default": "Standaard",
+                "label": "View",
+                "fullscreen": "Toggle full screen",
+                "languages": "Language",
+                "default": "Default",
                 "langCodes": {
+                    "ca": "Català",
                     "de": "Deutsch",
                     "en": "English",
                     "es": "Español",
@@ -44,251 +55,268 @@
                     "zh-TW": "國語"
                 }
             },
-            "file": {
-                "label": "Accounts",
-                "importPresale": "Importeer Accounts",
-                "newAccount": "Nieuw account",
-                "backup": "Backup",
-                "backupKeyStore": "Accounts",
-                "backupMist": "Applicatie Data"
-            },
             "develop": {
-                "uploadToSwarm": "Uploaden naar Swarm",
-                "label": "Ontwikkelen",
-                "devTools": "Ontwikkelaars Opties Inschakelen",
-                "devToolsMistUI": "Mist UI",
+                "label": "Develop",
+                "devTools": "Toggle developer tools",
+                "devToolsMistUI": "Ellagem UI",
                 "devToolsWalletUI": "Wallet UI",
                 "devToolsWebview": "__webview__",
-                "runTests": "Tests uitvoeren",
-                "logFiles": "Toon log bestand",
+                "runTests": "Run tests",
+                "logFiles": "Show log file",
                 "openRemix": "Open Remix IDE",
-                "externalNode": "Externe Node in gebruik",
-                "ethereumNode": "Ethereum Node",
-                "network": "Netwerk",
+                "externalNode": "using external node",
+                "ethereumNode": "Ellaism Node",
+                "network": "Network",
+                "mainNetwork": "Main Network",
                 "nodeMode": "Chain download",
-                "fullNode": "Bewaar volledige blockchain",
-                "lightNode": "Gebruik light Node (experimenteel!)",
-                "mainNetwork": "Hoofdnetwerk",
-                "startMining": "⛏ Start Mining",
-                "stopMining": "⛏ Stop Mining"
+                "fullNode": "Store full blockchain",
+                "lightNode": "Use light Node (experimental!)",
+                "startMining": "⛏ Start mining",
+                "stopMining": "⛏ Stop mining"
             },
             "window": {
-                "label": "Scherm",
-                "minimize": "Minimaliseer",
-                "close": "Sluiten",
-                "toFront": "Alles op voorgrond"
+                "label": "Window",
+                "minimize": "Minimize",
+                "close": "Close",
+                "toFront": "Bring all to front"
             },
             "help": {
                 "label": "Help",
-                "reportBug": "Rapporteer een probleem op Github"
+                "walletsafety": "Wallet Safety Tips",
+                "mistWiki": "Troubleshooting and Help",
+                "gitter": "Mist channel on Gitter",
+                "reportBug": "Report an issue on Github",
+                "learnmore": "Learn more about ellaism"
+            },
+            "community": {
+                "label": "Community",
+                "voting": "Carbon Voting",
+                "boards": "Message Boards",
+                "twitter": "Tweet Us",
+                "pools": "Mining Pools ⛏",
+                "marketinfo": "Market Info",
+                "coinprice": "Coin Price"
+            },
+            "exchanges": {
+                "label": "Exchanges",
+                "cryptopia": "Cryptopia",
+                "stocks": "Stocks.Exchange",
+                "bisq": "Bisq P2P Exchange"
             }
         },
         "errors": {
-            "nodeConnect": "Verbinden met node niet mogelijk? Zie de logboek bestanden voor meer informatie:",
-            "nodeStartup": "Het lijkt erop dat de node niet kan worden opgestart, draait er al een? Is deze de database aan het upgraden?",
+            "nodeConnect": "Couldn't connect to node? See the logs for more:",
+            "nodeStartup": "It seems like the node couldn't be started.  Do you already have one running? Is it upgrading the database right now?",
             "timeSync": {
-                "title": "Je computer's klok is niet gesynchroniseerd.",
-                "description": "Om succesvol met het Ethereum netwerk te verbinden moet je computer's klok gesynchroniseerd zijn met een tijdssynchronisatie server.",
-                "win32": "Ga naar je Internet Tijd Instellingen in je configuratiescherm en selecteer de optie. Zie deze uitleg voor details: http://www.guidingtech.com/3119/windows-clock-sync/",
-                "linux": "Installeer voor een tijdssynchronisatieserver \"ntp\" via \"apt-get install ntp\".",
-                "darwin": "Zet tijdssynchronisatie aan door in je instellingen de optie \"Tijd en datum automatisch instellen\" te activeren."
+                "title": "Your computer's clock is not synced.",
+                "description": "To successfully synchronize with the Ellaism network, you need to sync your computer's clock with a time sync server.",
+                "win32": "Go to your Internet Time Settings in your system preferences and check the box. See this guide for details: http://www.guidingtech.com/3119/windows-clock-sync/",
+                "linux": "To enable a time sync server, install \"ntp\" via \"apt-get install ntp\".",
+                "darwin": "To enable time sync, open the time preferences and check \"Set the time and date automatically\"."
             },
-            "nodeChecksumMismatch": {
-                "title": "Checksum mismatch in gedownloade node!",
-                "description": "__algorithm__: __hash__\n\nInstalleer de __type__ node versie __version__ handmatig."
+           "nodeChecksumMismatch": {
+                "title": "Checksum mismatch in downloaded node!",
+                "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
             },
             "legacyChain": {
-                "title": "Legacy chain gedetecteerd",
-                "description": "Je node draait momenteel op de niet ondersteunde Ethereum Classic chain. Om deze chain te gebruiken dien je de tools te gebruiken van het Ethereum Classic project op\nhttps://ethereumclassic.github.io.\n\nOm terug te gaan naar de standaard Ethereum chain kun je deze tutorial volgen:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+                "title": "Legacy chain detected",
+                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain, use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/ethereum/mist/releases/0.8.2"
             }
         },
         "rightClick": {
-            "reload": "Herladen",
-            "openDevTools": "Open Ontwikkelaarstools",
-            "inspectElements": "Element Inspecteren"
+            "reload": "Reload",
+            "openDevTools": "Open developer tools",
+            "inspectElements": "Inspect element"
         },
         "nodeInfo": {
-            "nodeSyncing": "__blockDiff__ blokken te gaan",
-            "blockReceived": "Nieuw blok ontvangen",
-            "blockNumber": "Jouw laatste bloknummer",
-            "timeSinceBlock": "Verstreken tijd sinds laatste blok",
-            "checkingWhichNetwork": "Netwerk aan het controleren...",
+            "nodeSyncing": "__blockDiff__ blocks left",
+            "blockReceived": "New block received",
+            "blockReceivedShort": "New block",
+            "blockNumber": "Your latest block number",
+            "timeSinceBlock": "Elapsed time since last block",
+            "checkingWhichNetwork": "Checking network...",
             "mainNetwork": "Main-net",
             "testNetwork": "Test-net",
             "privateNetwork": "Private-net",
-            "mainnetExplain": "Je zit op het main Ethereum wereldwijde netwerk",
-            "testnetExplain": "Je bent actief op het __name__, VERSTUUR GEEN echte Ether naar deze adressen",
-            "privatenetExplain": "Je zit op een private net, VERSTUUR GEEN echte Ether naar deze adressen",
-            "unknownnetExplain": "Niet in staat om te bepalen op welk netwerk je zit",
+            "mainnetExplain": "You are on the main Ellaism global network",
+            "testnetExplain": "You are on the __name__. DO NOT SEND any real Ella to these addresses",
+            "privatenetExplain": "You are on a private net. DO NOT SEND any real ella to these addresses",
+            "unknownnetExplain": "Unable to determine which network you are on",
             "peers": "peers"
         },
         "sidebar": {
             "buttons": {
-                "browser": "Verkennen"
+                "browser": "Browse"
+            },
+            "submenu": {
+                "account": "Account",
+                "account_plural": "Accounts",
+                "connectAccounts": "Connect Accounts"
             }
         },
         "browserBar": {
             "buttons": {
-                "noAccounts": "Geen accounts ingesteld",
-                "connect": "Verbind"
+                "noAccounts": "No accounts set",
+                "connect": "Connect"
             }
         },
         "startScreen": {
-            "runningNodeFound": "Lopende Ethereum node gevonden!",
-            "startingNode": "Ethereum node starten...",
-            "stoppingNode": "Ethereum node stoppen...",
-            "startedNode": "Applicatie starten...",
-            "nodeConnectionTimeout": "Ethereum node opstarten niet mogelijk!<br><small>Als je <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth geinstalleerd hebt</a>, gebruik dan dit commando om het op te starten: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> Of meld een fout </a></small>",
-            "nodeBinaryNotFound": "Geen Ethereum node gevonden!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Start er a.u.b. handmatig een. </a> </small>",
-            "nodeStarting": "Ethereum node opstarten...",
-            "nodeStarted": "Ethereum node gestart",
-            "nodeConnected": "Ethereum node verbonden",
-            "nodeStopping": "Ethereum node afsluiten...",
-            "nodeStopped": "Ethereum node gestopt",
-            "nodeError": "Ethereum node verbindingsfout :'(",
-            "unableToBindPort": "Ethereum node kan niet opstarten. Draait er al een?",
-            "nodeSyncing": "Ethereum node moet synchroniseren, even geduld alstublieft...",
-            "nodeSyncInfo": "Blok __currentBlock__ van __highestBlock__ aan het downloaden.",
-            "nodeSyncInfoStates": "Blok __displayBlock__ van __highestBlock__ aan het downloaden, <br> Chain structuur __displayState__ van __displayKnownStates__ aan het downloaden",
-            "nodeSyncConnecting": "Zoeken naar peers...",
-            "nodeSyncFoundPeers": "Verbinden met __peers__ peers...",
-            "peerSearchTimeout": "Sla peer search over",
-            "launchApp": "Applicatie Opstarten",
+            "runningNodeFound": "Found running Ellaism node!",
+            "startingNode": "Starting Ellaism node...",
+            "stoppingNode": "Stopping Ellaism node...",
+            "startedNode": "Starting application...",
+            "nodeConnectionTimeout": "Couldn't start Ellaism node!<br><small>If you <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>installed Geth</a>, use this command to run it: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> Or report an issue </a></small>",
+            "nodeBinaryNotFound": "No Ellaism node binary found!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Please start one manually before. </a> </small>",
+            "nodeStarting": "Ellaism node starting up...",
+            "nodeStarted": "Ellaism node started",
+            "nodeConnected": "Ellaism node connected",
+            "nodeStopping": "Ellaism node stopping...",
+            "nodeStopped": "Ellaism node stopped",
+            "nodeError": "Ellaism node connection error:'(",
+            "unableToBindPort": "Ellaism node cannot run. Is another instance already running?",
+            "nodeSyncing": "Ellaism node needs to sync, please wait...",
+            "nodeSyncInfo": "Downloading block __displayBlock__ of __highestBlock__",
+            "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
+            "nodeSyncConnecting": "Looking for peers...",
+            "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
+            "peerSearchTimeout": "Skip peer search",
+            "launchApp": "Launch Application",
             "clientBinaries": {
-                "scanning": "Controleren op node update...",
-                "downloading": "Downloaden van nieuwe node...",
-                "loadConfig": "Laden van client config...",
-                "filtering": "Filteren van client binaries...",
-                "done": "Ethereum node up-to-date...",
-                "error": "Fout bij het uitvoeren van de gedownloade binary."
+                "scanning": "Checking for node update...",
+                "downloading": "Downloading new node...",
+                "loadConfig": "Loading client config...",
+                "filtering": "Filtering client binaries...",
+                "done": "Ellaism node up-to-date...",
+                "error": "Error running downloaded binary."
             }
         },
         "popupWindows": {
             "updateAvailable": {
-                "newVersionAvailable": "Nieuwe __name__ versie beschikbaar",
-                "version": "Versie",
+                "newVersionAvailable": "New __name__ version available",
+                "version": "Version",
                 "downloadURL": "Download URL",
                 "checksum": "Checksum",
-                "downloadAndRestart": "Updaten en opnieuw opstarten",
-                "download": "Download nieuwe versie",
-                "skipUpdate": "Sla update over",
-                "notNow": "Vraag me later opnieuw",
-                "checking": "Controleren op updates voor __name__...",
-                "noUpdateFound": "Geen updates gevonden. Je hebt de laatste versie __name__."
+                "downloadAndRestart": "Update and Restart",
+                "download": "Download new version",
+                "skipUpdate": "Skip Update",
+                "notNow": "Ask me later",
+                "checking": "Checking for updates to __name__...",
+                "noUpdateFound": "No update found. You are running the latest version of __name__."
             },
             "requestAccount": {
-                "title": "Account aanmaken",
-                "enterPassword": "Wachtwoord invoeren",
-                "repeatPassword": "Wachtwoord herhalen",
-                "creating": "Account genereren...",
+                "title": "Create account",
+                "enterPassword": "Enter password",
+                "repeatPassword": "Repeat password",
+                "creating": "Generating account...",
+                "backupHint": "Make sure you backup your keyfiles AND password!\n\nYou can find your keyfiles folder using the main menu -> Accounts -> Backup -> Accounts. Keep a copy of the \"keystore\" folder where you can't lose it!",
                 "errors": {
-                    "passwordMismatch": "Je wachtwoorden komen niet overeen.",
-                    "passwordTooShort": "Kies een langer wachtwoord"
+                    "passwordMismatch": "Your passwords don't match.",
+                    "passwordTooShort": "Make a longer password"
                 }
             },
             "unlockMasterPassword": {
-                "title": "Voer hoofdwachtwoord in",
-                "enterPassword": "Voer hoofdwachtwoord in",
-                "unlocking": "Ontgrendelen...",
+                "title": "Enter master password",
+                "enterPassword": "Enter master password",
+                "unlocking": "Unlocking...",
                 "errors": {
-                    "wrongPassword": "Wachtwoord is niet correct, probeer het nog eens."
+                    "wrongPassword": "Password is wrong. Try again."
                 }
             },
             "sendTransactionConfirmation": {
                 "title": {
-                    "sendTransaction": "Verzend transactie",
-                    "contractExecution": "Voer contract uit",
-                    "createContract": "Contract aanmaken"
+                    "sendTransaction": "Send transaction",
+                    "contractExecution": "Execute contract",
+                    "createContract": "Create contract"
                 },
-                "contractExecutionInfo": "Je staat op het punt een functie uit te voeren op een contract. Dit kan overdrachten van waarde tot gevolg hebben.",
-                "contractCreationInfo": "Je staat op het punt een contract aan te maken met de gegeven gevevens.",
-                "enterPassword": "Voer wachtwoord in om de transactie te bevestigen",
-                "unlocking": "Bevestigen...",
-                "createContract": "Contract aanmaken",
-                "estimatedFee": "Ingeschatte transactie kosten",
-                "estimatedGasError": "De kans is groot dat de transactie zal mislukken. Als je de transactie toch wilt uitvoeren zal misschien alle gas worden verbruikt.",
-                "transactionThrow": "Het contract staat niet toe dat deze transactie wordt uitgevoerd",
-                "noEstimate": "We konden de hoeveelheid gas niet inschatten.",
-                "gasPrice": "Gas prijs",
-                "perMillionGas": "Ether per millioen gas",
-                "gasLimit": "Geef maximum transactie kosten aan",
-                "data": "Ruwe Data",
+                "contractExecutionInfo": "You are about to execute a function on a contract. This might involve transfer of value.",
+                "contractCreationInfo": "You are about to create a contract from the provided data.",
+                "enterPassword": "Enter password to confirm the transaction",
+                "unlocking": "Confirming...",
+                "createContract": "Create contract",
+                "estimatedFee": "Estimated fee consumption",
+                "estimatedGasError": "It seems this transaction will fail. If you submit it, it may consume all the gas you provide.",
+                "transactionThrow": "The contract won't allow this transaction to be executed",
+                "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+                "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount.",
+                "noEstimate": "We couldn't estimate the gas.",
+                "gasPrice": "Gas price",
+                "perMillionGas": "ether per million gas",
+                "gasLimit": "Provide maximum fee",
+                "data": "Raw Data",
                 "parameters": "Parameters",
                 "buttons": {
-                    "sendTransaction": "Verstuur transactie"
+                    "sendTransaction": "Send transaction"
                 },
                 "errors": {
-                    "connectionTimeout": "Kon niet verbinden met de node, is het in de achtergrond uitgevallen?",
-                    "wrongPassword": "Onjuist wachtwoord",
-                    "multipleKeysMatchAddress": "Meerdere keys matchen hebben hetzelfde adres, verwijder duplicaten uit de keystore (menu -> accounts -> backup -> accounts)",
-                    "insufficientFundsForGas": "Onvoldoende saldo in hoofd account (Etherbase) om gas te betalen",
-                    "sameAccount": "Kan niet naar zichzelf versturen"
+                    "connectionTimeout": "Couldn't connect to the node, did it crash in the background?",
+                    "wrongPassword": "Wrong password",
+                    "multipleKeysMatchAddress": "Multiple keys match address.  Please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
+                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "sameAccount": "Can't send to itself"
                 },
-                "showRawBytecode": "Toon ruwe data",
-                "showDecodedParameters": "Toon gedecodeerde parameters",
-                "lookupData": "Probeer de data te decoderen",
-                "lookupDataExplainer": "Zoek hiernaar op het internet",
-                "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
-                "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount."
+                "showRawBytecode": "show raw data",
+                "showDecodedParameters": "show decoded parameters",
+                "lookupData": "Try to decode data",
+                "lookupDataExplainer": "Look this up on the internet"
             },
             "onboarding": {
-                "description": "Ethereum is een decentraal platform voor het bouwen van applicaties op een blockchain: software die immuun is voor fraude en levenslang waarde en eigendom over kan brengen",
-                "goToTestnet": "Gebruik het test netwerk (Rinkeby)",
-                "goToTestnetDescription": "Test de technologie vrij in een testongeving, zonder echte Ether te gebruiken.",
-                "gotoMainnet": "Gebruik hoofdnetwerk",
-                "gotoMainnetDescription": "Je zult een beetje Ether nodig hebben om contracten uit te voeren. Geen zorgen, we helpen je met het verkrijgen...",
-                "doYouHaveAWalletFile": "Heb je een wallet bestand?",
-                "walletFileDescription": "<p>Als je mee hebt gedaan met de Ethereum voorverkoop van 2014 zou je een bestand met de naam <code>ethereum_wallet_backup.json</code> ontvangen moeten hebben. Je kon dit bestand downloaden na je contributie en is ook per email verstuurd</p>",
-                "dropFilesHere": "Sleep voorverkoop bestand hier",
-                "creating": "Aanmaken...",
-                "importing": "Importeren...",
-                "skip": "Sla deze stap over",
-                "next": "Volgende",
-                "protectTitle": "Bescherm je account",
-                "protectDescription": "Kies een wachtwoord voor je nieuwe account. Maak het even veilig alsof het uw huissleutels zijn!",
-                "accountTitle": "Opladen!",
-                "accountTitleTestnet": "Mine wat!",
-                "etherDescription": "Het Ethereum netwerk is gebaseerd op het “Ether” token. Je zal een kleine hoeveelheid nodig hebben om dingen op het netwerk te doen.",
-                "loadItDescription": "Als je al Bitcoins of een andere cryptocurrency hebt kan je deze makkelijk inwisselen voor Ether met Shapeshift.<br><br> Wij raden aan een hoeveelheid van tussen de <strong>0.25 en 1 Ether</strong> om te wisselen.",
-                "mineItDescription": "<strong>Op het testnetwerk kun je zelf Ether mijnen door te gaan naar het <em>Ontwikkelaars</em> menu en te kiezen voor <em>Begin Mining</em>. </strong> <br> <strong> PROBEER GEEN ECHTE ETHER NAAR DIT ADRES TE VERSTUREN </strong>",
-                "you": "Je",
-                "etherbase": "Centrale account (Etherbase)",
-                "depositBitcoin": "Bitcoin Storten",
-                "viaShapeshift": "Direct omwisselen via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
-                "learnIt": "Leer terwijl je wacht",
-                "downloadingBlocks": "Blokken downloaden",
-                "syncMessage": "Blok __displayBlock__ van __highestBlockString__",
-                "syncMessageWithStates": "Blok __displayBlock__ van __highestBlockString__ (Chain structuur __statesPercent__%)",
-                "startingSync": "Wachten op synchronisatie..",
-                "tutorial1Description": "<p> Het enige wat er nog moet gebeuren is wachten tot de download compleet is. Hier zijn een aantal leessuggesties: </p> <h4>Maak je eigen geld </h4> <p> Maak een cryptocurrency met een vaste uitgeveven hoeveelheid, tokens die vermogen uit de echte wereld voorstellen, etc </p>",
-                "tutorial2Description": "<h4> Start een crowdsale </h4> <p> Haal geld op voor een gemeenschappelijk doel, volledig betrouwbaar zonder derde partij. Ga om het traditionele systeem heen en haal geld direct bij de bron op door een organisatie te crowdfunden via de blockchain</p>",
-                "tutorial3Description": "<h4> Blockchain Organisatie </h4> <p> Maak een autonome organisatie aan met onbreekbare regels over het uitgeven van geld en wie beslissingen kan maken. Laat je investeerders een actieve rol nemen in het besluiten hoe geld wordt uitgegeven</p>",
+                "description": "Ellaism is a platform for decentralized blockchain apps with a fully featured programming language",
+                "goToTestnet": "Use the test network (NOT ONLINE)",
+                "goToTestnetDescription": "Test the technology freely in a sandboxed testnet, without using real Ether.",
+                "gotoMainnet": "Use the main network",
+                "gotoMainnetDescription": "You’ll need some Ether to create and execute contracts. Don't worry, we'll help you get some...",
+                "doYouHaveAWalletFile": "Do you have a wallet file?",
+                "walletFileDescription": "<p>Move any wallet file here to import.<br></p>",
+                "dropFilesHere": "Drop wallet file",
+                "creating": "Creating...",
+                "importing": "Importing...",
+                "skip": "Skip this step",
+                "next": "Next",
+                "protectTitle": "Protect your account",
+                "protectDescription": "Choose a password for your new account. Make it as strong as if it were to protect your house keys!",
+                "accountTitle": "Load it up!",
+                "accountTitleTestnet": "Mine some!",
+                "etherDescription": "The ellaism network is based on a token called “Ella”. You’ll need a small amount of it to do anything on the Ellaism network.",
+                "loadItDescription": "If you already own Bitcoin, or any other cryptocurrency, you can easily convert it to ether using Shapeshift. <br><br> We recommend loading somewhere between <strong>0.25 to 1 ether</strong>.",
+                "faucetDescription": "The Rinkeby testnet uses Clique Proof of Authority as a consensus mechanism, therefore there's no mining. If you want to get some test ether, head to the Rinkeby Faucet: <strong> faucet.rinkeby.io </strong>",
+                "you": "YOU",
+                "etherbase": "Main account (etherbase)",
+                "depositBitcoin": "Deposit using Bitcoin",
+                "viaShapeshift": "Instant conversion via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
+                "learnIt": "Learn while you wait",
+                "downloadingBlocks": "Downloading blocks",
+                "syncMessage": "Block __displayBlock__ of __highestBlockString__",
+                "syncMessageWithStates": "Block __displayBlock__ of __highestBlockString__ (Chain structure __statesPercent__%)",
+                "startingSync": "Getting ready to sync..",
+                "tutorial1Description": "<p> Now the only thing left to do is wait for the download to finish. Here are some reading suggestions: </p> <h4>Make your own money </h4> <p> Make a cryptocurrency with a fixed market supply, tokens representing real world assets, etc </p>",
+                "tutorial2Description": "<h4> Create a crowdsale </h4> <p> Raise funds for a common goal, fully trustable without a third party. Sidestep the hurdle of traditional funding system and go directly to the source by funding an organization via the blockchain.</p>",
+                "tutorial3Description": "<h4> Create a blockchain organization </h4> <p> Create an autonomous organization with rules on spending money and making decisions for you and your investors.</p>",
                 "buttons": {
-                    "showPassword": "Toon wachtwoord",
-                    "importAccount": "Importeer account",
-                    "launchApp": "Start Applicatie!",
-                    "learnReceipt": "Leer dit recept"
+                    "showPassword": "Show password",
+                    "importAccount": "Import account",
+                    "launchApp": "Launch Application!",
+                    "learnReceipt": "Learn this recipe"
                 },
                 "errors": {
-                    "nodeNotStartedYet": "Wacht nog een aantal seconden tot je node volledig is opgestart en probeer het nog een keer",
-                    "unknownFile": "Bestand niet herkent.",
-                    "wrongPassword": "Incorrect wachtwoord.",
-                    "importFailed": "Bestand importeren mislukt: __error__"
+                    "nodeNotStartedYet": "Wait a few more seconds until your node is fully started and try again",
+                    "unknownFile": "File not recognised.",
+                    "wrongPassword": "Wrong password.",
+                    "importFailed": "Couldn't import the file, got: __error__"
                 }
             },
             "connectAccount": {
-                "chooseAccountTitle": "Kies account",
-                "createAccount": "Creëer nieuw account",
-                "pinToSidebar": "Pin app aan de sidebar",
-                "connectAccountDescription": "Je deelt je indentiteit met __dappName__. Hierdoor heeft de app toegen tot alle openbare informatie van uw accounts inclusief de saldi."
+                "chooseAccountTitle": "Choose account",
+                "createAccount": "Create new account",
+                "pinToSidebar": "Pin app to the sidebar",
+                "connectAccountDescription": "You are sharing your identity with __dappName__. This allows the app to see any public information related to your accounts, including balances connected to it."
             }
         }
     },
     "elements": {
-        "checksumAlert": "Dit adres ziet er valide uit, maar het mist een aantal beveiligingsfuncties die je zullen beschermen teken typfouten, dus ga graag even na of dit de goede is. Als aangeveven, ga na of het beveiligingsicoon klopt.",
-        "identiconHelper": "Dit is een beveilliginsicoon, als er enige veranderingen op dit adres plaats vinden dan zou er een volledig ander icoon moeten staan",
+        "checksumAlert":"This address looks valid, but it doesn't have some security features that will protect you against typos, so double check you have the right one. If provided, check if the security icon matches.",
+        "identiconHelper": "This is a security icon.  If there were any change to the address, the resulting icon would be a completely different one",
         "type": {
-            "address": "Adres",
+            "address": "Address",
             "bool": "Boolean",
             "int": "Integer",
             "uint": "Natural Number",

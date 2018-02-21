@@ -219,28 +219,16 @@ Helpers.detectNetwork = function (hash) {
     var network = {};
 
     switch (hash) {
-    case '0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3':
+    case '0x4d7df65052bb21264d6ad2d6fe2d5578a36be12f71bf8d0559b0c15c4dc539b5':
         console.log('Network is mainnet');
         network.type = 'mainnet';
         network.name = 'Main';
         break;
 
-    case '0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d':
-        console.log('Network is Testnet #3 (Ropsten)');
+    case '0x526339a5483bb1d4550cb9be181eae931c20f5b9648470bf9b8ef8db5171f82f':
+        console.log('Network is Testnet #1 (Ella Testnet)');
         network.type = 'testnet';
-        network.name = 'Ropsten';
-        break;
-
-    case '0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177':
-        console.log('Network is Testnet #4 (Rinkeby)');
-        network.type = 'testnet';
-        network.name = 'Rinkeby';
-        break;
-
-    case '0x0cd786a2425d16f152c658316c423e6ce1181e15c3295826d7c9904cba9ce303':
-        console.log('Network is Testnet #2 (Morden)');
-        network.type = 'testnet';
-        network.name = 'Morden';
+        network.name = 'Ellatest';
         break;
 
     default:

@@ -14,8 +14,6 @@ const Settings = require('./settings');
 const ethereumNode = require('./ethereumNode.js');
 const keyfileRecognizer = require('ethereum-keyfile-recognizer');
 
-import { getLanguage } from './core/settings/actions';
-
 const log = logger.create('ipcCommunicator');
 
 require('./abi.js');
@@ -77,25 +75,33 @@ ipc.on('backendAction_windowMessageToOwner', (e, error, value) => {
     const windowId = e.sender.id;
     const senderWindow = Windows.getById(windowId);
 
-    // If msg is from a generic window, use the "actingType" instead of type
-    const senderWindowType = senderWindow.actingType || senderWindow.type;
-
     if (senderWindow.ownerId) {
         const ownerWindow = Windows.getById(senderWindow.ownerId);
         const mainWindow = Windows.getByType('main');
 
         if (ownerWindow) {
-            ownerWindow.send('uiAction_windowMessage', senderWindowType, error, value);
+            ownerWindow.send('uiAction_windowMessage', senderWindow.type, error, value);
         }
 
         // send through the mainWindow to the webviews
         if (mainWindow) {
-            mainWindow.send('uiAction_windowMessage', senderWindowType, senderWindow.ownerId, error, value);
+            mainWindow.send('uiAction_windowMessage', senderWindow.type, senderWindow.ownerId, error, value);
         }
     }
 });
 
-ipc.on('backendAction_getLanguage', (e) => { store.dispatch(getLanguage(e)); });
+ipc.on('backendAction_setLanguage', (e) => {
+    global.i18n.changeLanguage(Settings.language.substr(0, 5), (err) => {
+        if (!err) {
+            log.info('Backend language set to: ', global.i18n.language);
+            appMenu(global.webviews);
+        }
+    });
+});
+
+ipc.on('backendAction_getLanguage', (e) => {
+    e.returnValue = Settings.language;
+});
 
 ipc.on('backendAction_stopWebviewNavigation', (e, id) => {
     console.log('webcontent ID', id);
@@ -138,12 +144,12 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
                         keystorePath += '/.web3/keys';
                     }
                 // geth
-                } else {
+              } else {
                     if (process.platform === 'darwin') keystorePath += '/Library/Ethereum/keystore';
 
                     if (process.platform === 'freebsd' ||
                         process.platform === 'linux' ||
-                        process.platform === 'sunos') keystorePath += '/.ethereum/keystore';
+                        process.platform === 'sunos') keystorePath += '/.local/share/io.parity.ethereum/keys/ellaism';
 
                     if (process.platform === 'win32') keystorePath = `${Settings.appDataPath}\\Ethereum\\keystore`;
                 }
@@ -222,7 +228,14 @@ ipc.on('backendAction_importWalletFile', (e, path, pw) => {
 
 
 const createAccountPopup = (e) => {
-    Windows.createPopup('requestAccount', { ownerId: e.sender.id });
+    Windows.createPopup('requestAccount', {
+        ownerId: e.sender.id,
+        electronOptions: {
+            width: 400,
+            height: 230,
+            alwaysOnTop: true,
+        },
+    });
 };
 
 // MIST API
@@ -232,7 +245,16 @@ ipc.on('mistAPI_requestAccount', (e) => {
     if (global.mode === 'wallet') {
         createAccountPopup(e);
     } else { // Mist
-        Windows.createPopup('connectAccount', { ownerId: e.sender.id });
+        Windows.createPopup('connectAccount', {
+            ownerId: e.sender.id,
+            electronOptions: {
+                width: 460,
+                height: 520,
+                maximizable: false,
+                minimizable: false,
+                alwaysOnTop: true,
+            },
+        });
     }
 });
 

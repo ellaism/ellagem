@@ -2,39 +2,40 @@
     "mist": {
         "applicationMenu": {
             "app": {
-                "label": "__app__",
-                "about": "Sobre __app__",
-                "checkForUpdates": "Buscar actualitzacions...",
-                "checkForNodeUpdates": "Busca actualitzacions dels nodes d'Ethereum...",
-                "services": "Serveis",
-                "hide": "Hide __app__",
-                "hideOthers": "Ocultar els altres",
-                "showAll": "Mostrar tot",
-                "quit": "Sortir __app__"
+                "label": "Ellagem",
+                "about": "About Ellagem",
+                "walletsafety": "Wallet safety tips",
+                "checkForUpdates": "Check for updates...",
+                "checkForNodeUpdates": "Check for Ellaism node updates...",
+                "services": "Services",
+                "hide": "Hide Ellagem",
+                "hideOthers": "Hide others",
+                "showAll": "Show all",
+                "quit": "Quit Ellagem"
             },
             "file": {
-                "label": "Fitxer",
-                "importPresale": "Importa compte",
-                "newAccount": "Nou compte",
-                "backup": "Copia de seguretat",
-                "backupKeyStore": "Comptes",
-                "backupMist": "Dades de l'aplicació",
-                "swarmUpload": "Pujar a Swarm..."
+                "label": "Accounts",
+                "importPresale": "Import accounts",
+                "newAccount": "New account",
+                "backup": "Backup",
+                "backupKeyStore": "Key Files",
+                "backupMist": "Application data",
+                "swarmUpload": "Upload to Swarm..."
             },
             "edit": {
-                "label": "Editar",
-                "undo": "Desfer",
-                "redo": "Refer",
-                "cut": "Tallar",
-                "copy": "Copiar",
-                "paste": "Enganxar",
-                "selectAll": "Seleccionar tot"
+                "label": "Edit",
+                "undo": "Undo",
+                "redo": "Redo",
+                "cut": "Cut",
+                "copy": "Copy",
+                "paste": "Paste",
+                "selectAll": "Select all"
             },
             "view": {
-                "label": "Veure",
-                "fullscreen": "Commutar pantalla completa",
-                "languages": "Idioma",
-                "default": "Defecte",
+                "label": "View",
+                "fullscreen": "Toggle full screen",
+                "languages": "Language",
+                "default": "Default",
                 "langCodes": {
                     "ca": "Català",
                     "de": "Deutsch",
@@ -55,255 +56,272 @@
                 }
             },
             "develop": {
-                "label": "Desenvolupar",
-                "devTools": "Commutar eines de desenvolupador",
-                "devToolsMistUI": "Mist UI",
+                "label": "Develop",
+                "devTools": "Toggle developer tools",
+                "devToolsMistUI": "Ellagem UI",
                 "devToolsWalletUI": "Wallet UI",
                 "devToolsWebview": "__webview__",
-                "runTests": "Executar tests",
-                "logFiles": "Mostrar fitxer de log",
-                "openRemix": "Obrir Remix IDE",
-                "externalNode": "utilitzar un node extern",
-                "ethereumNode": "Node d'Ethereum",
-                "network": "Xarxa",
-                "mainNetwork": "Xarxa Principal",
-                "nodeMode": "Descàrrega de la Cadena",
-                "fullNode": "Desar la blockchain completa",
-                "lightNode": "Utilitzar el Node lleuger (experimental!)",
-                "startMining": "⛏ Començar a minar (només Testnet)",
-                "stopMining": "⛏ Parar de minar"
+                "runTests": "Run tests",
+                "logFiles": "Show log file",
+                "openRemix": "Open Remix IDE",
+                "externalNode": "using external node",
+                "ethereumNode": "Ellaism Node",
+                "network": "Network",
+                "mainNetwork": "Main Network",
+                "nodeMode": "Chain download",
+                "fullNode": "Store full blockchain",
+                "lightNode": "Use light Node (experimental!)",
+                "startMining": "⛏ Start mining",
+                "stopMining": "⛏ Stop mining"
             },
             "window": {
-                "label": "Finestra",
-                "minimize": "Minimitza",
-                "close": "Tancar",
-                "toFront": "Portar tot al front"
+                "label": "Window",
+                "minimize": "Minimize",
+                "close": "Close",
+                "toFront": "Bring all to front"
             },
             "help": {
-                "label": "Ajuda",
-                "mistWiki": "Solució de problemes i Ajuda",
-                "gitter": "Canal de Mist a Gitter",
-                "reportBug": "Reportar un problema a Github"
+                "label": "Help",
+                "walletsafety": "Wallet Safety Tips",
+                "mistWiki": "Troubleshooting and Help",
+                "gitter": "Mist channel on Gitter",
+                "reportBug": "Report an issue on Github",
+                "learnmore": "Learn more about ellaism"
+            },
+            "community": {
+                "label": "Community",
+                "voting": "Carbon Voting",
+                "boards": "Message Boards",
+                "twitter": "Tweet Us",
+                "pools": "Mining Pools ⛏",
+                "marketinfo": "Market Info",
+                "coinprice": "Coin Price"
+            },
+            "exchanges": {
+                "label": "Exchanges",
+                "cryptopia": "Cryptopia",
+                "stocks": "Stocks.Exchange",
+                "bisq": "Bisq P2P Exchange"
             }
         },
         "errors": {
-            "nodeConnect": "No has pogut connectar al node? Mira els logs per més:",
-            "nodeStartup": "Sembla que el node no s'ha pogut iniciar. Ja en tens un executant-se? Està actualitzant la base de dades just ara?",
+            "nodeConnect": "Couldn't connect to node? See the logs for more:",
+            "nodeStartup": "It seems like the node couldn't be started.  Do you already have one running? Is it upgrading the database right now?",
             "timeSync": {
-                "title": "El rellotge de l'ordinador no està sincronitzat.",
-                "description": "Per estar del tot sincronitzat amb la xarxa Ethereum, necessites sincronitzar el rellotge del teu ordinador amb un servidor de sincronització.",
-                "win32": "Vés a les teves preferències del rellotge d'internet i marca la casella. Mira aquesta guia per tenir-ne més detalls: http://www.guidingtech.com/3119/windows-clock-sync/",
-                "linux": "Per habilitar la sincronització del rellotge, instal·la \"ntp\" mitjançant \"apt-get install ntp\".",
-                "darwin": "Per habilitar la sincronització del rellotge, obre les preferències de Data i hora i activa \"Ajustar la data i l'hora automàticament\"."
+                "title": "Your computer's clock is not synced.",
+                "description": "To successfully synchronize with the Ellaism network, you need to sync your computer's clock with a time sync server.",
+                "win32": "Go to your Internet Time Settings in your system preferences and check the box. See this guide for details: http://www.guidingtech.com/3119/windows-clock-sync/",
+                "linux": "To enable a time sync server, install \"ntp\" via \"apt-get install ntp\".",
+                "darwin": "To enable time sync, open the time preferences and check \"Set the time and date automatically\"."
             },
            "nodeChecksumMismatch": {
-                "title": "La suma de verificació no coincideix amb el node descarregat!",
-                "description": "__algorithm__: __hash__\n\nSi us plau instal·la el __type__ node versió __version__ manualment."
+                "title": "Checksum mismatch in downloaded node!",
+                "description": "__algorithm__: __hash__\n\nPlease install the __type__ node version __version__ manually."
             },
             "legacyChain": {
-                "title": "Cadena 'legacy' detectada",
-                "description": "El teu node està actualment a la cadena d'Ethereum Classic. Per utilitzar aquesta cadena, utilitza les eines proporcionades pel projecte ethereum classic a\nhttps://ethereumclassic.github.io.\n\nPer canviar a la cadena principal d'ethereum segueix el aquest tutorial:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+                "title": "Legacy chain detected",
+                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain, use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/ethereum/mist/releases/0.8.2"
             }
         },
         "rightClick": {
-            "reload": "Recarregar",
-            "openDevTools": "Obre les eines de desenvolupador",
-            "inspectElements": "Inspecciona element"
+            "reload": "Reload",
+            "openDevTools": "Open developer tools",
+            "inspectElements": "Inspect element"
         },
         "nodeInfo": {
-            "nodeSyncing": "Resten __blockDiff__ blocs",
-            "blockReceived": "Nou bloc rebut",
-            "blockReceivedShort": "Nou bloc",
-            "blockNumber": "El teu últim número de bloc",
-            "timeSinceBlock": "Temps transcorregut des de l'últim bloc",
-            "checkingWhichNetwork": "Comprovant la xarxa...",
+            "nodeSyncing": "__blockDiff__ blocks left",
+            "blockReceived": "New block received",
+            "blockReceivedShort": "New block",
+            "blockNumber": "Your latest block number",
+            "timeSinceBlock": "Elapsed time since last block",
+            "checkingWhichNetwork": "Checking network...",
             "mainNetwork": "Main-net",
             "testNetwork": "Test-net",
             "privateNetwork": "Private-net",
-            "mainnetExplain": "Ets a la xarxa gobal d'Ethereum principal",
-            "testnetExplain": "Ets a la __name__. NO ENVIÏS cap Ether real a aquestes adreces",
-            "privatenetExplain": "Ets a la xara privada. NO ENVIÏS cap Ether real a aquestes adreces",
-            "unknownnetExplain": "Incapaç de determinar a quina xarxa ets",
+            "mainnetExplain": "You are on the main Ellaism global network",
+            "testnetExplain": "You are on the __name__. DO NOT SEND any real Ella to these addresses",
+            "privatenetExplain": "You are on a private net. DO NOT SEND any real ella to these addresses",
+            "unknownnetExplain": "Unable to determine which network you are on",
             "peers": "peers"
         },
         "sidebar": {
             "buttons": {
-                "browser": "Navega"
+                "browser": "Browse"
             },
             "submenu": {
-                "account": "Compte",
-                "account_plural": "Comptes",
-                "connectAccounts": "Connectar Comptes"
+                "account": "Account",
+                "account_plural": "Accounts",
+                "connectAccounts": "Connect Accounts"
             }
         },
         "browserBar": {
             "buttons": {
-                "noAccounts": "Comptes no establerts",
-                "connect": "Connectar"
+                "noAccounts": "No accounts set",
+                "connect": "Connect"
             }
         },
         "startScreen": {
-            "runningNodeFound": "Trobat node d'Ethereum executant-se!",
-            "startingNode": "Iniciant node d'Ethereum...",
-            "stoppingNode": "Aturant node d'Ethereum...",
-            "startedNode": "Iniciant l'aplicació...",
-            "nodeConnectionTimeout": "No s'ha pogut iniciar el node d'Ethereum!<br><small>Si has <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>instal·lat Geth</a>, utilitza aquesta comanda per executar-lo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> O notifica l'error </a></small>",
-            "nodeBinaryNotFound": "No s'ha torbat el binari del node d'Ethereum!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Si us plau inicia'n un manualment primer. </a> </small>",
-            "nodeStarting": "Node d'Ethereum iniciant-se...",
-            "nodeStarted": "Node d'Ethereum iniciat",
-            "nodeConnected": "Node d'Ethereum connectat",
-            "nodeStopping": "Ethereum node aturant-se...",
-            "nodeStopped": "Node d'Ethereum aturat",
-            "nodeError": "Error de connectivitat del node d'Ethereum:'(",
-            "unableToBindPort": "El node d'Ethereum no pot executar-se. N'hi ha alguna altra instància excutant-se?",
-            "nodeSyncing": "El node d'Ethereum necessita sincronitzar-se, si us plau espera...",
-            "nodeSyncInfo": "Descarregant bloc __displayBlock__ de __highestBlock__",
-            "nodeSyncInfoStates": "Descarregant bloc __displayBlock__ de __highestBlock__, <br> Descarregant l'estructura de la cadena __displayState__ de __displayKnownStates__",
-            "nodeSyncConnecting": "Cercant peers...",
-            "nodeSyncFoundPeers": "Connectant amb __peers__ peers...",
-            "peerSearchTimeout": "Passar cerca de peers",
-            "launchApp": "Iniciar Aplicació",
+            "runningNodeFound": "Found running Ellaism node!",
+            "startingNode": "Starting Ellaism node...",
+            "stoppingNode": "Stopping Ellaism node...",
+            "startedNode": "Starting application...",
+            "nodeConnectionTimeout": "Couldn't start Ellaism node!<br><small>If you <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>installed Geth</a>, use this command to run it: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> Or report an issue </a></small>",
+            "nodeBinaryNotFound": "No Ellaism node binary found!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Please start one manually before. </a> </small>",
+            "nodeStarting": "Ellaism node starting up...",
+            "nodeStarted": "Ellaism node started",
+            "nodeConnected": "Ellaism node connected",
+            "nodeStopping": "Ellaism node stopping...",
+            "nodeStopped": "Ellaism node stopped",
+            "nodeError": "Ellaism node connection error:'(",
+            "unableToBindPort": "Ellaism node cannot run. Is another instance already running?",
+            "nodeSyncing": "Ellaism node needs to sync, please wait...",
+            "nodeSyncInfo": "Downloading block __displayBlock__ of __highestBlock__",
+            "nodeSyncInfoStates": "Downloading block __displayBlock__ of __highestBlock__, <br> Downloading chain structure __displayState__ of __displayKnownStates__",
+            "nodeSyncConnecting": "Looking for peers...",
+            "nodeSyncFoundPeers": "Connecting to __peers__ peers...",
+            "peerSearchTimeout": "Skip peer search",
+            "launchApp": "Launch Application",
             "clientBinaries": {
-                "scanning": "Comprovant actualitzacions del node...",
-                "downloading": "Descarregant un nou node...",
-                "loadConfig": "Carregant configuració del client...",
-                "filtering": "Filtrant binaris del client...",
-                "done": "Node d'Ethereum actualitzat...",
-                "error": "Error executant el binari descarregat."
+                "scanning": "Checking for node update...",
+                "downloading": "Downloading new node...",
+                "loadConfig": "Loading client config...",
+                "filtering": "Filtering client binaries...",
+                "done": "Ellaism node up-to-date...",
+                "error": "Error running downloaded binary."
             }
         },
         "popupWindows": {
             "updateAvailable": {
-                "newVersionAvailable": "Nova __name__ versió disponible",
-                "version": "Versió",
-                "downloadURL": "URL de descàrrega",
+                "newVersionAvailable": "New __name__ version available",
+                "version": "Version",
+                "downloadURL": "Download URL",
                 "checksum": "Checksum",
-                "downloadAndRestart": "Actualitza i Reinicia",
-                "download": "Descarrega la nova versió",
-                "skipUpdate": "Omet l'actualització",
-                "notNow": "Pregunta-m'ho després",
-                "checking": "Comprovant actualitzacions a __name__...",
-                "noUpdateFound": "No s'ha trobat cap actualització. Estàs executant l'última versió de __name__."
+                "downloadAndRestart": "Update and Restart",
+                "download": "Download new version",
+                "skipUpdate": "Skip Update",
+                "notNow": "Ask me later",
+                "checking": "Checking for updates to __name__...",
+                "noUpdateFound": "No update found. You are running the latest version of __name__."
             },
             "requestAccount": {
-                "title": "Crear un compte",
-                "enterPassword": "Introdueix una contrasenya",
-                "repeatPassword": "Repeteix la contrasenya",
-                "creating": "Generant el compte...",
-                "backupHint": "Assegura't que fas una còpia de seguretat dels teus fitxer de claus I contrasenya!\n\nPots trobar el teu fitxer de claus mitjançant el menú principal -> Comptes -> Copia de seguretat -> Comptes. Desa una copia de la carpeta del \"fitxer de claus\" on no puguis perdre-la!",
+                "title": "Create account",
+                "enterPassword": "Enter password",
+                "repeatPassword": "Repeat password",
+                "creating": "Generating account...",
+                "backupHint": "Make sure you backup your keyfiles AND password!\n\nYou can find your keyfiles folder using the main menu -> Accounts -> Backup -> Accounts. Keep a copy of the \"keystore\" folder where you can't lose it!",
                 "errors": {
-                    "passwordMismatch": "Les teves contrasenyes no coincideixen.",
-                    "passwordTooShort": "Utilitza una contrasenya més llarga"
+                    "passwordMismatch": "Your passwords don't match.",
+                    "passwordTooShort": "Make a longer password"
                 }
             },
             "unlockMasterPassword": {
-                "title": "Introdueix una contrasenya mestra",
-                "enterPassword": "Introdueix contrasenya mestra",
-                "unlocking": "Desbloquejant...",
+                "title": "Enter master password",
+                "enterPassword": "Enter master password",
+                "unlocking": "Unlocking...",
                 "errors": {
-                    "wrongPassword": "La contrasenya és incorrecta. Torna-ho a provar."
+                    "wrongPassword": "Password is wrong. Try again."
                 }
             },
             "sendTransactionConfirmation": {
                 "title": {
-                    "sendTransaction": "Enviar transacció",
-                    "contractExecution": "Executar contracte",
-                    "createContract": "Crear contracte"
+                    "sendTransaction": "Send transaction",
+                    "contractExecution": "Execute contract",
+                    "createContract": "Create contract"
                 },
-                "contractExecutionInfo": "Estàs a punt d'executar una funció d'un contracte. Això podria implicar una transferència de valor.",
-                "contractCreationInfo": "Estàs a punt de crear un contracte de les dades proporcionades.",
-                "enterPassword": "Introdueix la contrasenya per confirmar la transacció",
-                "unlocking": "Confirmant...",
-                "createContract": "Crear contracte",
-                "estimatedFee": "Comissió estimada",
-                "estimatedGasError": "Sembla que la transacció fallarà. Si l'envieu, pot consumir tot el gas proporcionat.",
-                "transactionThrow": "El contracte no et permetrà executar aquesta transacció",
-                "overBlockGasLimit": "El gas necesàri per aquesta execució pot sobrepassar el limit de gas pel bloc.",
-                "notEnoughGas": "El gas pot no ser suficient per acabar aquesta execució amb èxit.<br>Fés clic aquí per augmentar la quantitat de gas.",
-                "noEstimate": "No s'ha pogut calcular el gas necessari.",
-                "gasPrice": "Preu del Gas",
-                "perMillionGas": "ether per un milió de gas",
-                "gasLimit": "Proporciona la comissió màxima",
-                "data": "Dades en brut",
-                "parameters": "Paràmetres",
+                "contractExecutionInfo": "You are about to execute a function on a contract. This might involve transfer of value.",
+                "contractCreationInfo": "You are about to create a contract from the provided data.",
+                "enterPassword": "Enter password to confirm the transaction",
+                "unlocking": "Confirming...",
+                "createContract": "Create contract",
+                "estimatedFee": "Estimated fee consumption",
+                "estimatedGasError": "It seems this transaction will fail. If you submit it, it may consume all the gas you provide.",
+                "transactionThrow": "The contract won't allow this transaction to be executed",
+                "overBlockGasLimit": "The gas required for this execution could exceed the block gas limit.",
+                "notEnoughGas": "Gas might not be enough to successfully finish this transaction.<br>Click here to increase the gas amount.",
+                "noEstimate": "We couldn't estimate the gas.",
+                "gasPrice": "Gas price",
+                "perMillionGas": "ether per million gas",
+                "gasLimit": "Provide maximum fee",
+                "data": "Raw Data",
+                "parameters": "Parameters",
                 "buttons": {
-                    "sendTransaction": "Enviar transacció"
+                    "sendTransaction": "Send transaction"
                 },
                 "errors": {
-                    "connectionTimeout": "No s'ha pogut connectar al node, ha fallat la tasca al fons?",
-                    "wrongPassword": "Contrasenya errònia",
-                    "multipleKeysMatchAddress": "Multiples claus coincideixen amb l'adreça. Si us plau eliminar els duplicats del fitxer de claus (menú -> comptes -> copia de seguretat -> comptes)",
-                    "insufficientFundsForGas": "Saldo insuficient al compte principal (etherbase) per pagar el gas",
-                    "sameAccount": "No es pot enviar a un mateix"
+                    "connectionTimeout": "Couldn't connect to the node, did it crash in the background?",
+                    "wrongPassword": "Wrong password",
+                    "multipleKeysMatchAddress": "Multiple keys match address.  Please remove duplicates from keystore (menu -> accounts -> backup -> accounts)",
+                    "insufficientFundsForGas": "Insufficient funds in main account (etherbase) to pay for gas",
+                    "sameAccount": "Can't send to itself"
                 },
-                "showRawBytecode": "mostrar dades en brut",
-                "showDecodedParameters": "mostra els paràmetres descodificats",
-                "lookupData": "Intentar descodificar les dades",
-                "lookupDataExplainer": "Mira això a internet"
+                "showRawBytecode": "show raw data",
+                "showDecodedParameters": "show decoded parameters",
+                "lookupData": "Try to decode data",
+                "lookupDataExplainer": "Look this up on the internet"
             },
             "onboarding": {
-                "description": "Ethereum és una plataforma per aplicacions descentralitzades de la blockchain amb un llenguatge de programació complet",
-                "goToTestnet": "Utilitza la xarxa de test (Rinkeby)",
-                "goToTestnetDescription": "Prova la tecnologia lliurement a la xarxa de test 'sandboxed', sembla utilitzar Ether real.",
-                "gotoMainnet": "Utilitza la xarxa principal",
-                "gotoMainnetDescription": "Necessitaràs Ether per crear i executar contractes. No et preocupis, t'ajudarem a aconseguir-ne una mica...",
-                "doYouHaveAWalletFile": "Tens un fitxer de wallet?",
-                "walletFileDescription": "<p>Mou qualsevol wallet aquí per a importar-lo.<br>Si va participar a la Pre-venda d'Ethereum el 2014, hauries de tenir un fitxer anomenat <code>ethereum_wallet_backup.json</code>. El vas poder descarregar després de la venda i també se't va enviar al teu email</p>",
-                "dropFilesHere": "Deixa anar el fitxer de wallet",
-                "creating": "Creant...",
-                "importing": "Important...",
-                "skip": "Saltar aquest pas",
-                "next": "Següent",
-                "protectTitle": "Protegeix el teu compte",
-                "protectDescription": "Escull una contrasenya pel teu nou compte. Assegura't que és tant fort com si hagués de protegir les claus de casa teva!",
-                "accountTitle": "Carrega'l!",
-                "accountTitleTestnet": "Minar una mica!",
-                "etherDescription": "La xarxa d'ethereum es basa en un token anomenat “Ether”. En necessitaràs una petita quantitat per fer qualsevol cosa a la xarxa d'Ethereum.",
-                "loadItDescription": "Si ja tens Bitcoin, o qualsevol altra criptomoneda, pots canviar-la a Ether fàcilment utilitzant Shapeshift. <br><br> Et recomanem carregar entre <strong>0.25 i 1 Ether</strong>.",
-                "faucetDescription": "La xarxa de test Rinkeby utilitza 'Clique Proof of Authority' com a mecanisme de consens, pertant no hi ha minat. Si vols obtenir una mica d'ether de prova, vés a la Rinkeby Faucet: <strong> faucet.rinkeby.io </strong>",
-                "you": "TU",
-                "etherbase": "Compte principal (etherbase)",
-                "depositBitcoin": "Depositar utilitzant Bitcoin",
-                "viaShapeshift": "Conversió instantània mitjançant <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
-                "learnIt": "Aprèn mentre esperes",
-                "downloadingBlocks": "Descarregant blocs",
-                "syncMessage": "Bloc __displayBlock__ de __highestBlockString__",
-                "syncMessageWithStates": "Bloc __displayBlock__ de __highestBlockString__ (Estructura de cadena __statesPercent__%)",
-                "startingSync": "Preparant-se per sinc..",
-                "tutorial1Description": "<p> Ara l'última cosa que queda és esperar que la descàrrega acabi. Aquí tens alguna lectura suggerida: </p> <h4>Crea els teu propis diners </h4> <p> Crea una criptomoneda amb una quantitat fixa, tokens representant actius reals, etc. </p>",
-                "tutorial2Description": "<h4> Crea una venda a multituds </h4> <p> Aixeca capital per un objectiu comú, absolutament confiable sense tercers. Evita l'obstacle del finançament tradicional i vés directament a l'origen finançant una organització mitjançant la blockchain.</p>",
-                "tutorial3Description": "<h4> Crea una organització a la blockchain </h4> <p> Crea una organització autònoma amb normes de com es gasten els diners i es prenen les decisions per tu i els teus inversors.</p>",
+                "description": "Ellaism is a platform for decentralized blockchain apps with a fully featured programming language",
+                "goToTestnet": "Use the test network (NOT ONLINE)",
+                "goToTestnetDescription": "Test the technology freely in a sandboxed testnet, without using real Ether.",
+                "gotoMainnet": "Use the main network",
+                "gotoMainnetDescription": "You’ll need some Ether to create and execute contracts. Don't worry, we'll help you get some...",
+                "doYouHaveAWalletFile": "Do you have a wallet file?",
+                "walletFileDescription": "<p>Move any wallet file here to import.<br></p>",
+                "dropFilesHere": "Drop wallet file",
+                "creating": "Creating...",
+                "importing": "Importing...",
+                "skip": "Skip this step",
+                "next": "Next",
+                "protectTitle": "Protect your account",
+                "protectDescription": "Choose a password for your new account. Make it as strong as if it were to protect your house keys!",
+                "accountTitle": "Load it up!",
+                "accountTitleTestnet": "Mine some!",
+                "etherDescription": "The ellaism network is based on a token called “Ella”. You’ll need a small amount of it to do anything on the Ellaism network.",
+                "loadItDescription": "If you already own Bitcoin, or any other cryptocurrency, you can easily convert it to ether using Shapeshift. <br><br> We recommend loading somewhere between <strong>0.25 to 1 ether</strong>.",
+                "faucetDescription": "The Rinkeby testnet uses Clique Proof of Authority as a consensus mechanism, therefore there's no mining. If you want to get some test ether, head to the Rinkeby Faucet: <strong> faucet.rinkeby.io </strong>",
+                "you": "YOU",
+                "etherbase": "Main account (etherbase)",
+                "depositBitcoin": "Deposit using Bitcoin",
+                "viaShapeshift": "Instant conversion via <a href='https://shapeshift.io/' target='_blank'>Shapeshift</a>",
+                "learnIt": "Learn while you wait",
+                "downloadingBlocks": "Downloading blocks",
+                "syncMessage": "Block __displayBlock__ of __highestBlockString__",
+                "syncMessageWithStates": "Block __displayBlock__ of __highestBlockString__ (Chain structure __statesPercent__%)",
+                "startingSync": "Getting ready to sync..",
+                "tutorial1Description": "<p> Now the only thing left to do is wait for the download to finish. Here are some reading suggestions: </p> <h4>Make your own money </h4> <p> Make a cryptocurrency with a fixed market supply, tokens representing real world assets, etc </p>",
+                "tutorial2Description": "<h4> Create a crowdsale </h4> <p> Raise funds for a common goal, fully trustable without a third party. Sidestep the hurdle of traditional funding system and go directly to the source by funding an organization via the blockchain.</p>",
+                "tutorial3Description": "<h4> Create a blockchain organization </h4> <p> Create an autonomous organization with rules on spending money and making decisions for you and your investors.</p>",
                 "buttons": {
-                    "showPassword": "Mostra la contrasenya",
-                    "importAccount": "Importar compte",
-                    "launchApp": "Llança l'aplicació!",
-                    "learnReceipt": "Aprèn aquesta recepta"
+                    "showPassword": "Show password",
+                    "importAccount": "Import account",
+                    "launchApp": "Launch Application!",
+                    "learnReceipt": "Learn this recipe"
                 },
                 "errors": {
-                    "nodeNotStartedYet": "Espera uns quants segons més fins que el teu node s'hagi iniciat completament i torna-ho a provar",
-                    "unknownFile": "Fitxer no reconegut.",
-                    "wrongPassword": "Contrasenya incorrecta.",
-                    "importFailed": "No s'ha pogut importar el fitxer, s'ha obtingut l'error: __error__"
+                    "nodeNotStartedYet": "Wait a few more seconds until your node is fully started and try again",
+                    "unknownFile": "File not recognised.",
+                    "wrongPassword": "Wrong password.",
+                    "importFailed": "Couldn't import the file, got: __error__"
                 }
             },
             "connectAccount": {
-                "chooseAccountTitle": "Escull compte",
-                "createAccount": "Crea un nou compte",
-                "pinToSidebar": "Fixa app a la barra lateral",
-                "connectAccountDescription": "Estàs compartint la teva identitat amb __dappName__. Això permet a la app veure qualsevol informació pública rellevant relacionada amb els teus comptes, incloent els saldos."
+                "chooseAccountTitle": "Choose account",
+                "createAccount": "Create new account",
+                "pinToSidebar": "Pin app to the sidebar",
+                "connectAccountDescription": "You are sharing your identity with __dappName__. This allows the app to see any public information related to your accounts, including balances connected to it."
             }
         }
     },
     "elements": {
-        "checksumAlert":"Aquesta adreça sembla vàlida, però no té mesures de seguretat que ajuden a no equivocar-te errors tipogràfics, re-comprova que és la correcta. Si pots, comprova que la icona de seguretat coincideix.",
-        "identiconHelper": "Aquesta és la icona de seguretat. Si hi hagués cap canvi a l'adreça, la icona seria una completament diferent",
+        "checksumAlert":"This address looks valid, but it doesn't have some security features that will protect you against typos, so double check you have the right one. If provided, check if the security icon matches.",
+        "identiconHelper": "This is a security icon.  If there were any change to the address, the resulting icon would be a completely different one",
         "type": {
-            "address": "Adreça",
-            "bool": "Booleà",
-            "int": "Enter",
-            "uint": "Nombre Natural",
-            "string": "Cadena",
-            "bytes": "Octets"
+            "address": "Address",
+            "bool": "Boolean",
+            "int": "Integer",
+            "uint": "Natural Number",
+            "string": "String",
+            "bytes": "Bytes"
         }
     }
 }

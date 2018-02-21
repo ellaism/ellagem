@@ -1,24 +1,19 @@
 const EventEmitter = require('events').EventEmitter;
 const Q = require('bluebird');
+const Settings = require('./settings.js');
+const Swarm = require('swarm-js');
 const path = require('path');
 const fs = require('fs');
 const os = require('os');
 const clientBinaries = require('./../clientBinaries.json');
 
-import Settings from './settings';
-import Swarm from 'swarm-js';
-
-let instance = null;
-
 class SwarmNode extends EventEmitter {
     constructor() {
         super();
 
-        if (!instance) {
-            instance = this;
-        }
-
-        return instance;
+        this._swarm = null;
+        this._stop = null;
+        this._accountPassword = 'SAP';
     }
 
     getKeyPath() {
@@ -91,23 +86,14 @@ class SwarmNode extends EventEmitter {
         return this.startUsingGateway();
     }
 
-    stop() {
-        if (!this._swarm) {
-            return Q.reject(new Error('Swarm not initialized, unable to stop.'));
-        }
-
-        this.emit('stopping');
-        this._stop();
-        this.emit('stopped');
-    }
-
     upload(arg) {
         if (!this._swarm) {
-            return Q.reject(new Error('Swarm not initialized, unable to upload.'));
+            return Q.reject(new Error('Swarm not initialized. Have you called swarmNode.init()?'));
         }
 
         return this._swarm.upload(arg);
     }
+
 }
 
 module.exports = new SwarmNode();

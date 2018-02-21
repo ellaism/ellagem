@@ -7,7 +7,7 @@ require('./include/openExternal.js');
 require('./include/setBasePath')('interface');
 
 // set appmenu language
-ipcRenderer.send('backendAction_getLanguage');
+ipcRenderer.send('backendAction_setLanguage');
 
 // disable pinch zoom
 webFrame.setZoomLevelLimits(1, 1);
@@ -16,6 +16,3 @@ window.ipc = ipcRenderer;
 window.mist = mist();
 window.mistMode = remote.getGlobal('mode');
 window.dirname = remote.getGlobal('dirname');
-
-// Initialise the Redux store
-window.store = require('./rendererStore');

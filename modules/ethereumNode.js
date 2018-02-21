@@ -5,16 +5,13 @@ const spawn = require('child_process').spawn;
 const { dialog } = require('electron');
 const Windows = require('./windows.js');
 const Settings = require('./settings');
+const log = require('./utils/logger').create('EthereumNode');
 const logRotate = require('log-rotate');
-const path = require('path');
 const EventEmitter = require('events').EventEmitter;
 const Sockets = require('./socketManager');
 const ClientBinaryManager = require('./clientBinaryManager');
 
-import logger from './utils/logger';
-const ethereumNodeLog = logger.create('EthereumNode');
-
-const DEFAULT_NODE_TYPE = 'geth';
+const DEFAULT_NODE_TYPE = 'parity';
 const DEFAULT_NETWORK = 'main';
 const DEFAULT_SYNCMODE = 'fast';
 
@@ -81,6 +78,10 @@ class EthereumNode extends EventEmitter {
 
     get isGeth() {
         return this._type === 'geth';
+    }
+
+    get isParity() {
+        return this._type === 'parity';
     }
 
     get isMainNetwork() {
@@ -152,16 +153,16 @@ class EthereumNode extends EventEmitter {
                 this.emit('runningNodeFound');
             })
             .catch(() => {
-                ethereumNodeLog.warn('Failed to connect to node. Maybe it\'s not running so let\'s start our own...');
+                log.warn('Failed to connect to node. Maybe it\'s not running so let\'s start our own...');
 
-                ethereumNodeLog.info(`Node type: ${this.defaultNodeType}`);
-                ethereumNodeLog.info(`Network: ${this.defaultNetwork}`);
-                ethereumNodeLog.info(`SyncMode: ${this.defaultSyncMode}`);
+                log.info(`Node type: ${this.defaultNodeType}`);
+                log.info(`Network: ${this.defaultNetwork}`);
+                log.info(`SyncMode: ${this.defaultSyncMode}`);
 
                 // if not, start node yourself
                 return this._start(this.defaultNodeType, this.defaultNetwork, this.defaultSyncMode)
                     .catch((err) => {
-                        ethereumNodeLog.error('Failed to start node', err);
+                        log.error('Failed to start node', err);
                         throw err;
                     });
             });
@@ -174,7 +175,7 @@ class EthereumNode extends EventEmitter {
                 throw new Error('Cannot restart node since it was started externally');
             }
 
-            ethereumNodeLog.info('Restart node', newType, newNetwork);
+            log.info('Restart node', newType, newNetwork);
 
             return this.stop()
                 .then(() => Windows.loading.show())
@@ -185,7 +186,7 @@ class EthereumNode extends EventEmitter {
                     ))
                 .then(() => Windows.loading.hide())
                 .catch((err) => {
-                    ethereumNodeLog.error('Error restarting node', err);
+                    log.error('Error restarting node', err);
                     throw err;
                 });
         });
@@ -206,7 +207,7 @@ class EthereumNode extends EventEmitter {
 
                 this.state = STATES.STOPPING;
 
-                ethereumNodeLog.info(`Stopping existing node: ${this._type} ${this._network}`);
+                log.info(`Stopping existing node: ${this._type} ${this._network}`);
 
                 this._node.stderr.removeAllListeners('data');
                 this._node.stdout.removeAllListeners('data');
@@ -236,8 +237,12 @@ class EthereumNode extends EventEmitter {
                 this._stopPromise = null;
             });
         }
-        ethereumNodeLog.debug('Disconnection already in progress, returning Promise.');
+        log.debug('Disconnection already in progress, returning Promise.');
         return this._stopPromise;
+    }
+
+    getLog() {
+        return Settings.loadUserData('node.log');
     }
 
     /**
@@ -261,19 +266,19 @@ class EthereumNode extends EventEmitter {
      * @return {Promise}
      */
     _start(nodeType, network, syncMode) {
-        ethereumNodeLog.info(`Start node: ${nodeType} ${network} ${syncMode}`);
+        log.info(`Start node: ${nodeType} ${network} ${syncMode}`);
 
         const isTestNet = (network === 'test');
 
         if (isTestNet) {
-            ethereumNodeLog.debug('Node will connect to the test network');
+            log.debug('Node will connect to the test network');
         }
 
         return this.stop()
             .then(() => {
                 return this.__startNode(nodeType, network, syncMode)
                     .catch((err) => {
-                        ethereumNodeLog.error('Failed to start node', err);
+                        log.error('Failed to start node', err);
 
                         this._showNodeErrorDialog(nodeType, network);
 
@@ -281,7 +286,7 @@ class EthereumNode extends EventEmitter {
                     });
             })
             .then((proc) => {
-                ethereumNodeLog.info(`Started node successfully: ${nodeType} ${network} ${syncMode}`);
+                log.info(`Started node successfully: ${nodeType} ${network} ${syncMode}`);
 
                 this._node = proc;
                 this.state = STATES.STARTED;
@@ -297,7 +302,7 @@ class EthereumNode extends EventEmitter {
                         this.state = STATES.CONNECTED;
                     })
                     .catch((err) => {
-                        ethereumNodeLog.error('Failed to connect to node', err);
+                        log.error('Failed to connect to node', err);
 
                         if (err.toString().indexOf('timeout') >= 0) {
                             this.emit('nodeConnectionTimeout');
@@ -343,7 +348,7 @@ class EthereumNode extends EventEmitter {
             throw new Error(`Node "${nodeType}" binPath is not available.`);
         }
 
-        ethereumNodeLog.info(`Start node using ${binPath}`);
+        log.info(`Start node using ${binPath}`);
 
         return new Q((resolve, reject) => {
             this.__startProcess(nodeType, network, binPath, syncMode)
@@ -362,68 +367,165 @@ class EthereumNode extends EventEmitter {
         }
 
         return new Q((resolve, reject) => {
-            ethereumNodeLog.trace('Rotate log file');
+            log.trace('Rotate log file');
 
             // rotate the log file
-            logRotate(path.join(Settings.userDataPath, 'logs', 'all.log'), { count: 5 }, (err) => {
+            logRotate(Settings.constructUserDataPath('node.log'), { count: 5 }, (err) => {
                 if (err) {
-                    ethereumNodeLog.error('Log rotation problems', err);
+                    log.error('Log rotation problems', err);
 
                     return reject(err);
                 }
 
                 let args;
 
-                switch (network) {
+                //Windows start
+                if (process.platform === 'win32') {
+                  if(nodeType === 'parity'){
+                  switch (network) {
+                    // Starts Ellaism test network
+                    case 'test':
+                        args = [
+                          '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                          '--chain', 'C:\\Program Files\\Ellagem\\ellaismtestnet.json',
+                          '--usd-per-tx', '0',
+                          '--geth'
+                        ];
+                        break;
 
-                // Starts Ropsten network
-                case 'test':
-                    args = [
-                        '--testnet',
-                        '--syncmode', syncMode,
-                        '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                        '--ipcpath', Settings.rpcIpcPath
-                    ];
-                    break;
+                    // Starts Main net
+                    default:
+                        args = (nodeType === 'parity')
+                            ? [
+                                '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                                '--chain', 'ellaism',
+                                '--usd-per-tx', '0',
+                                '--geth'
+                            ]
+                            : ['--unsafe-transactions'];
+                    }
 
-                // Starts Rinkeby network
-                case 'rinkeby':
-                    args = [
-                        '--rinkeby',
-                        '--syncmode', syncMode,
-                        '--cache', ((process.arch === 'x64') ? '1024' : '512'),
-                        '--ipcpath', Settings.rpcIpcPath
-                    ];
-                    break;
-
-                // Starts local network
-                case 'dev':
-                    args = [
-                        '--dev',
-                        '--minerthreads', '1',
-                        '--ipcpath', Settings.rpcIpcPath
-                    ];
-                    break;
-
-                // Starts Main net
-                default:
-                    args = (nodeType === 'geth')
-                        ? [
-                            '--syncmode', syncMode,
+                  } else {
+                    switch (network) {
+                      // Starts Ellaism test network
+                      case 'test':
+                          args = [
                             '--cache', ((process.arch === 'x64') ? '1024' : '512')
-                        ]
-                        : ['--unsafe-transactions'];
+                          ];
+                          break;
+
+                      // Starts Main net
+                      default:
+                          args = (nodeType === 'geth')
+                              ? [
+                                  '--cache', ((process.arch === 'x64') ? '1024' : '512')
+                              ]
+                              : ['--unsafe-transactions'];
+                      }
+                  }
+                }
+
+                //Linux start
+                if (process.platform === 'freebsd' || process.platform === 'linux' || process.platform === 'sunos') {
+                  if(nodeType === 'parity'){
+                  switch (network) {
+                    // Starts Ellaism test network
+                    case 'test':
+                        args = [
+                          '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                          '--chain', '/ellaismtest.json',
+                          '--usd-per-tx', '0',
+                          '--geth'
+                        ];
+                        break;
+
+                    // Starts Main net
+                    default:
+                        args = (nodeType === 'parity')
+                            ? [
+                                '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                                '--chain', 'ellaism',
+                                '--usd-per-tx', '0',
+                                '--geth'
+                            ]
+                            : ['--unsafe-transactions'];
+                    }
+
+                  } else {
+                    switch (network) {
+                      // Starts Ellaism test network
+                      case 'test':
+                          args = [
+                            '--cache', ((process.arch === 'x64') ? '1024' : '512')
+                          ];
+                          break;
+
+                      // Starts Main net
+                      default:
+                          args = (nodeType === 'geth')
+                              ? [
+                                  '--cache', ((process.arch === 'x64') ? '1024' : '512')
+                              ]
+                              : ['--unsafe-transactions'];
+                      }
+                  }
+                }
+
+                //Mac start
+                if (process.platform === 'darwin') {
+                  if(nodeType === 'parity'){
+                  switch (network) {
+                    // Starts Ellaism test network
+                    case 'test':
+                        args = [
+                          '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                          '--chain', '/ellaismtest.json',
+                          '--usd-per-tx', '0',
+                          '--geth'
+                        ];
+                        break;
+
+                    // Starts Main net
+                    default:
+                        args = (nodeType === 'parity')
+                            ? [
+                                '--cache', ((process.arch === 'x64') ? '1024' : '512'),
+                                '--chain', 'ellaism',
+                                '--usd-per-tx', '0',
+                                '--geth'
+                            ]
+                            : ['--unsafe-transactions'];
+                    }
+
+                  } else {
+                    switch (network) {
+                      // Starts Ellaism test network
+                      case 'test':
+                          args = [
+                            '--cache', ((process.arch === 'x64') ? '1024' : '512')
+                          ];
+                          break;
+
+                      // Starts Main net
+                      default:
+                          args = (nodeType === 'geth')
+                              ? [
+                                  '--cache', ((process.arch === 'x64') ? '1024' : '512')
+                              ]
+                              : ['--unsafe-transactions'];
+                      }
+                  }
                 }
 
                 const nodeOptions = Settings.nodeOptions;
 
                 if (nodeOptions && nodeOptions.length) {
-                    ethereumNodeLog.debug('Custom node options', nodeOptions);
+                    log.debug('Custom node options', nodeOptions);
 
                     args = args.concat(nodeOptions);
                 }
 
-                ethereumNodeLog.trace('Spawn', binPath, args);
+                log.trace('Spawn', binPath, args);
 
                 const proc = spawn(binPath, args);
 
@@ -432,7 +534,7 @@ class EthereumNode extends EventEmitter {
                     if (STATES.STARTING === this.state) {
                         this.state = STATES.ERROR;
 
-                        ethereumNodeLog.info('Node startup error');
+                        log.info('Node startup error');
 
                         // TODO: detect this properly
                         // this.emit('nodeBinaryNotFound');
@@ -443,12 +545,12 @@ class EthereumNode extends EventEmitter {
 
                 // we need to read the buff to prevent node from not working
                 proc.stderr.pipe(
-                    fs.createWriteStream(path.join(Settings.userDataPath, 'logs', 'all.log'), { flags: 'a' })
+                    fs.createWriteStream(Settings.constructUserDataPath('node.log'), { flags: 'a' })
                 );
 
                 // when proc outputs data
                 proc.stdout.on('data', (data) => {
-                    ethereumNodeLog.trace('Got stdout data');
+                    log.trace('Got stdout data');
 
                     this.emit('data', data);
 
@@ -464,7 +566,7 @@ class EthereumNode extends EventEmitter {
                                     error.tag = UNABLE_TO_BIND_PORT_ERROR;
                                 }
 
-                                ethereumNodeLog.debug(error);
+                                log.debug(error);
 
                                 return reject(error);
                             }
@@ -474,7 +576,7 @@ class EthereumNode extends EventEmitter {
 
                 // when proc outputs data in stderr
                 proc.stderr.on('data', (data) => {
-                    ethereumNodeLog.trace('Got stderr data');
+                    log.trace('Got stderr data');
 
                     this.emit('data', data);
                 });
@@ -491,7 +593,7 @@ class EthereumNode extends EventEmitter {
                     */
                     setTimeout(() => {
                         if (STATES.STARTING === this.state) {
-                            ethereumNodeLog.info(`${NODE_START_WAIT_MS}ms elapsed, assuming node started up successfully`);
+                            log.info(`${NODE_START_WAIT_MS}ms elapsed, assuming node started up successfully`);
 
                             resolve(proc);
                         }
@@ -503,25 +605,25 @@ class EthereumNode extends EventEmitter {
 
 
     _showNodeErrorDialog(nodeType, network) {
-        let log = path.join(Settings.userDataPath, 'logs', 'all.log');
+        let nodelog = this.getLog();
 
-        if (log) {
-            log = `...${log.slice(-1000)}`;
+        if (nodelog) {
+            nodelog = `...${nodelog.slice(-1000)}`;
         } else {
-            log = global.i18n.t('mist.errors.nodeStartup');
+            nodelog = global.i18n.t('mist.errors.nodeStartup');
         }
 
         // add node type
-        log = `Node type: ${nodeType}\n` +
+        nodelog = `Node type: ${nodeType}\n` +
             `Network: ${network}\n` +
             `Platform: ${process.platform} (Architecture ${process.arch})\n\n${
-            log}`;
+            nodelog}`;
 
         dialog.showMessageBox({
             type: 'error',
             buttons: ['OK'],
             message: global.i18n.t('mist.errors.nodeConnect'),
-            detail: log,
+            detail: nodelog,
         }, () => {});
     }
 
@@ -530,7 +632,7 @@ class EthereumNode extends EventEmitter {
         const cleanData = data.toString().replace(/[\r\n]+/, '');
         const nodeType = (this.type || 'node').toUpperCase();
 
-        ethereumNodeLog.trace(`${nodeType}: ${cleanData}`);
+        log.trace(`${nodeType}: ${cleanData}`);
 
         if (!/^-*$/.test(cleanData) && !_.isEmpty(cleanData)) {
             this.emit('nodeLog', cleanData);
@@ -539,14 +641,14 @@ class EthereumNode extends EventEmitter {
 
 
     _loadDefaults() {
-        ethereumNodeLog.trace('Load defaults');
+        log.trace('Load defaults');
 
         this.defaultNodeType = Settings.nodeType || Settings.loadUserData('node') || DEFAULT_NODE_TYPE;
         this.defaultNetwork = Settings.network || Settings.loadUserData('network') || DEFAULT_NETWORK;
         this.defaultSyncMode = Settings.syncmode || Settings.loadUserData('syncmode') || DEFAULT_SYNCMODE;
 
-        ethereumNodeLog.info(Settings.syncmode, Settings.loadUserData('syncmode'), DEFAULT_SYNCMODE);
-        ethereumNodeLog.info(`Defaults loaded: ${this.defaultNodeType} ${this.defaultNetwork} ${this.defaultSyncMode}`);
+        log.info(Settings.syncmode, Settings.loadUserData('syncmode'), DEFAULT_SYNCMODE);
+        log.info(`Defaults loaded: ${this.defaultNodeType} ${this.defaultNetwork} ${this.defaultSyncMode}`);
     }
 }
 

@@ -1,0 +1,13 @@
+os: osx
+language: node_js
+
+node_js:
+  - "4"
+  - "6"
+  
+script:
+  - "npm run test-coverage"
+
+notifications:
+  email:
+    - ram@hiddentao.com
